@@ -1,0 +1,21 @@
+{
+  "name": "Nano Banana Tutorial Platform",
+  "short_name": "Nano Banana",
+  "description": "Master Google's Nano Banana AI image editing with comprehensive tutorials and guides",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#164e63",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

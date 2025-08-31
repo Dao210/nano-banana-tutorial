@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/private/", "/admin/", "/api/"],
     },
-    sitemap: "https://nanobananatutorials.com/sitemap.xml",
+    sitemap: "https://nanobanana.fans/sitemap.xml",
   }
 }

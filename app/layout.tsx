@@ -18,7 +18,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nanobananatutorials.com"),
+  metadataBase: new URL("https://nanobanana.fans"),
   title: {
     default: "Nano Banana - AI Image Editing Tutorials & Guides",
     template: "%s | Nano Banana Tutorials",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "photo editing",
     "AI tools",
   ],
-  authors: [{ name: "Nano Banana Tutorial Platform", url: "https://nanobananatutorials.com" }],
+  authors: [{ name: "Nano Banana Tutorial Platform", url: "https://nanobanana.fans" }],
   creator: "Nano Banana Tutorial Platform",
   publisher: "Nano Banana Tutorial Platform",
   formatDetection: {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nanobananatutorials.com",
+    url: "https://nanobanana.fans",
     siteName: "Nano Banana Tutorial Platform",
     title: "Nano Banana - AI Image Editing Tutorials & Guides",
     description: "Master Google's Nano Banana AI image editing with comprehensive tutorials and expert guides.",
@@ -91,9 +91,9 @@ export const metadata: Metadata = {
     yahoo: "your-yahoo-verification-code",
   },
   alternates: {
-    canonical: "https://nanobananatutorials.com",
+    canonical: "https://nanobanana.fans",
     languages: {
-      "en-US": "https://nanobananatutorials.com",
+      "en-US": "https://nanobanana.fans",
     },
   },
   category: "Education",
@@ -112,7 +112,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#164e63" />
         <meta name="color-scheme" content="light dark" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <link rel="canonical" href="https://nanobananatutorials.com" />
+        <link rel="canonical" href="https://nanobanana.fans" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

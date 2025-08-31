@@ -149,7 +149,7 @@ export default function TutorialsPage() {
           title: "Nano Banana Tutorials - Complete Learning Library",
           description:
             "Browse our comprehensive collection of Nano Banana AI tutorials. From beginner guides to advanced techniques.",
-          url: "https://nanobananatutorials.com/tutorials",
+          url: "https://nanobanana.fans/tutorials",
           keywords: ["Nano Banana tutorials", "AI image editing guides", "Google Gemini tutorials"],
         }}
       />

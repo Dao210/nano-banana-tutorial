@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://nanobananatutorials.com"
+  const baseUrl = "https://nanobanana.fans"
 
   // Static pages
   const staticPages = [

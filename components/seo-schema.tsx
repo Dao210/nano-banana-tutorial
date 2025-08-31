@@ -43,7 +43,7 @@ export function SchemaOrg({ type, data }: SchemaOrgProps) {
       name: data.title,
       description: data.description,
       url: data.url,
-      image: data.image || "https://nanobananatutorials.com/og-image.jpg",
+      image: data.image || "https://nanobanana.fans/og-image.jpg",
     }
 
     if (type === "website") {
@@ -55,14 +55,14 @@ export function SchemaOrg({ type, data }: SchemaOrgProps) {
           name: "Nano Banana Tutorial Platform",
           logo: {
             "@type": "ImageObject",
-            url: "https://nanobananatutorials.com/logo.png",
+            url: "https://nanobanana.fans/logo.png",
           },
         },
         potentialAction: {
           "@type": "SearchAction",
           target: {
             "@type": "EntryPoint",
-            urlTemplate: "https://nanobananatutorials.com/search?search={search_term_string}",
+            urlTemplate: "https://nanobanana.fans/search?search={search_term_string}",
           },
           "query-input": "required name=search_term_string",
         },
@@ -84,7 +84,7 @@ export function SchemaOrg({ type, data }: SchemaOrgProps) {
           name: "Nano Banana Tutorial Platform",
           logo: {
             "@type": "ImageObject",
-            url: "https://nanobananatutorials.com/logo.png",
+            url: "https://nanobanana.fans/logo.png",
           },
         },
         keywords: data.keywords?.join(", "),
@@ -125,7 +125,7 @@ export function SchemaOrg({ type, data }: SchemaOrgProps) {
           name: "Nano Banana Tutorial Platform",
           logo: {
             "@type": "ImageObject",
-            url: "https://nanobananatutorials.com/logo.png",
+            url: "https://nanobanana.fans/logo.png",
           },
         },
         keywords: data.keywords?.join(", "),

@@ -204,8 +204,8 @@ export default function TutorialPage({ params }: { params: { slug: string } }) {
         data={{
           title: tutorialData.title,
           description: tutorialData.description,
-          url: `https://nanobananatutorials.com/tutorials/${params.slug}`,
-          image: "https://nanobananatutorials.com/og-image.jpg",
+          url: `https://nanobanana.fans/tutorials/${params.slug}`,
+          image: "https://nanobanana.fans/og-image.jpg",
           datePublished: tutorialData.publishedAt,
           dateModified: tutorialData.updatedAt,
           author: {
@@ -225,9 +225,9 @@ export default function TutorialPage({ params }: { params: { slug: string } }) {
 
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://nanobananatutorials.com" },
-          { name: "Tutorials", url: "https://nanobananatutorials.com/tutorials" },
-          { name: tutorialData.title, url: `https://nanobananatutorials.com/tutorials/${params.slug}` },
+          { name: "Home", url: "https://nanobanana.fans" },
+          { name: "Tutorials", url: "https://nanobanana.fans/tutorials" },
+          { name: tutorialData.title, url: `https://nanobanana.fans/tutorials/${params.slug}` },
         ]}
       />
 

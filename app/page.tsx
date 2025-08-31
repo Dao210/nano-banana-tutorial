@@ -16,8 +16,8 @@ export default function HomePage() {
           title: "Nano Banana - AI Image Editing Tutorials & Guides",
           description:
             "Master Google's Nano Banana AI image editing with comprehensive tutorials, step-by-step guides, and expert tips.",
-          url: "https://nanobananatutorials.com",
-          image: "https://nanobananatutorials.com/og-image.jpg",
+          url: "https://nanobanana.fans",
+          image: "https://nanobanana.fans/og-image.jpg",
           keywords: ["Nano Banana", "Google AI", "image editing", "AI tutorials", "character consistency"],
         }}
       />
@@ -338,7 +338,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground">© 2024 Nano Banana Tutorial Platform. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2025 Nano Banana Fans. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Privacy Policy

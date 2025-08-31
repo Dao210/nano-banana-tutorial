@@ -61,6 +61,8 @@ const featuredTutorials = [
     difficulty: "intermediate",
     tags: ["Character", "Consistency", "Advanced"],
     featured: true,
+    cover: "/new-tutorial-master-consistent-character-faces-with-nanobanana.webp",
+    link: "/tutorials/character-consistency",
   },
   {
     id: 3,

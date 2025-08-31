@@ -166,7 +166,11 @@ export default function HomePage() {
 
             <Card className="group hover:shadow-lg transition-shadow">
               <div className="aspect-video bg-gradient-to-br from-secondary/20 to-accent/20 rounded-t-lg flex items-center justify-center">
-                <Users className="h-12 w-12 text-secondary/60" />
+                  <img
+                  src="/new-tutorial-master-consistent-character-faces-with-nanobanana.webp"
+                  alt="Getting Started with Nano Banana"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardHeader>
                 <div className="flex items-center gap-2 mb-2">

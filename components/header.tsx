@@ -16,11 +16,40 @@ function Header({ currentPath = "/" }: HeaderProps) {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="flex items-center justify-between w-full">
-          {/* Left spacer for balance */}
-          <div className="flex-1"></div>
+          <nav className="hidden md:flex items-center space-x-6">
+            <Link
+              href="/"
+              className={`text-sm font-medium transition-colors ${isActive("/") ? "text-primary" : "hover:text-primary"}`}
+            >
+              Home
+            </Link>
+            <Link
+              href="/tutorials"
+              className={`text-sm font-medium transition-colors ${
+                isActive("/tutorials") || currentPath?.startsWith("/tutorials") ? "text-primary" : "hover:text-primary"
+              }`}
+            >
+              Tutorials
+            </Link>
+            <Link
+              href="/community"
+              className={`text-sm font-medium transition-colors ${
+                isActive("/community") ? "text-primary" : "hover:text-primary"
+              }`}
+            >
+              Community
+            </Link>
+            <Link
+              href="/about"
+              className={`text-sm font-medium transition-colors ${
+                isActive("/about") ? "text-primary" : "hover:text-primary"
+              }`}
+            >
+              About
+            </Link>
+          </nav>
 
-          {/* Centered logo and navigation */}
-          <div className="flex items-center space-x-8">
+          <div className="absolute left-1/2 transform -translate-x-1/2">
             <Link href="/" className="flex items-center space-x-2">
               <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
                 <Sparkles className="h-5 w-5 text-primary-foreground" />
@@ -29,45 +58,10 @@ function Header({ currentPath = "/" }: HeaderProps) {
                 Nano Banana
               </span>
             </Link>
-
-            <nav className="hidden md:flex items-center space-x-6">
-              <Link
-                href="/"
-                className={`text-sm font-medium transition-colors ${isActive("/") ? "text-primary" : "hover:text-primary"}`}
-              >
-                Home
-              </Link>
-              <Link
-                href="/tutorials"
-                className={`text-sm font-medium transition-colors ${
-                  isActive("/tutorials") || currentPath?.startsWith("/tutorials")
-                    ? "text-primary"
-                    : "hover:text-primary"
-                }`}
-              >
-                Tutorials
-              </Link>
-              <Link
-                href="/community"
-                className={`text-sm font-medium transition-colors ${
-                  isActive("/community") ? "text-primary" : "hover:text-primary"
-                }`}
-              >
-                Community
-              </Link>
-              <Link
-                href="/about"
-                className={`text-sm font-medium transition-colors ${
-                  isActive("/about") ? "text-primary" : "hover:text-primary"
-                }`}
-              >
-                About
-              </Link>
-            </nav>
           </div>
 
           {/* Right-aligned search */}
-          <div className="flex items-center space-x-4 flex-1 justify-end">
+          <div className="flex items-center space-x-4">
             <div className="hidden sm:block">
               <SearchDialog>
                 <div className="relative cursor-pointer">

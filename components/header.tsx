@@ -14,45 +14,43 @@ function Header({ currentPath = "/" }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center relative">
-        {/* 左侧导航，宽度与内容区对齐 */}
-        <div className="flex items-center h-full" style={{ minWidth: 220 }}>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link
-              href="/"
-              className={`text-sm font-medium transition-colors ${isActive("/") ? "text-primary" : "hover:text-primary"}`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/tutorials"
-              className={`text-sm font-medium transition-colors ${
-                isActive("/tutorials") || currentPath?.startsWith("/tutorials") ? "text-primary" : "hover:text-primary"
-              }`}
-            >
-              Tutorials
-            </Link>
-            <Link
-              href="/community"
-              className={`text-sm font-medium transition-colors ${
-                isActive("/community") ? "text-primary" : "hover:text-primary"
-              }`}
-            >
-              Community
-            </Link>
-            <Link
-              href="/about"
-              className={`text-sm font-medium transition-colors ${
-                isActive("/about") ? "text-primary" : "hover:text-primary"
-              }`}
-            >
-              About
-            </Link>
-          </nav>
-        </div>
+      <div className="container flex h-16 items-center justify-between">
+        {/* 左侧导航，与内容区左对齐 */}
+        <nav className="hidden md:flex items-center space-x-6 flex-1 min-w-0">
+          <Link
+            href="/"
+            className={`text-sm font-medium transition-colors ${isActive("/") ? "text-primary" : "hover:text-primary"}`}
+          >
+            Home
+          </Link>
+          <Link
+            href="/tutorials"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/tutorials") || currentPath?.startsWith("/tutorials") ? "text-primary" : "hover:text-primary"
+            }`}
+          >
+            Tutorials
+          </Link>
+          <Link
+            href="/community"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/community") ? "text-primary" : "hover:text-primary"
+            }`}
+          >
+            Community
+          </Link>
+          <Link
+            href="/about"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/about") ? "text-primary" : "hover:text-primary"
+            }`}
+          >
+            About
+          </Link>
+        </nav>
 
-        {/* 居中Logo */}
-        <div className="absolute left-1/2 top-0 transform -translate-x-1/2 flex items-center h-full">
+        {/* 居中Logo，flex-shrink-0防止压缩 */}
+        <div className="flex-shrink-0 flex items-center justify-center mx-4">
           <Link href="/" className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
               <Sparkles className="h-5 w-5 text-primary-foreground" />
@@ -63,8 +61,8 @@ function Header({ currentPath = "/" }: HeaderProps) {
           </Link>
         </div>
 
-        {/* 右侧搜索和菜单 */}
-        <div className="flex items-center space-x-4 ml-auto">
+        {/* 右侧搜索和菜单，flex-1保证右对齐 */}
+        <div className="flex items-center space-x-4 flex-1 justify-end min-w-0">
           <div className="hidden sm:block">
             <SearchDialog>
               <div className="relative cursor-pointer">
@@ -73,7 +71,6 @@ function Header({ currentPath = "/" }: HeaderProps) {
               </div>
             </SearchDialog>
           </div>
-
           <div className="sm:hidden">
             <SearchDialog>
               <Button variant="ghost" size="sm">
@@ -82,7 +79,6 @@ function Header({ currentPath = "/" }: HeaderProps) {
               </Button>
             </SearchDialog>
           </div>
-
           <MobileNav />
         </div>
       </div>

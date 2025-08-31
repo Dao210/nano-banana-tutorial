@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input"
 import { Sparkles, Github, Twitter, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 
-export function Footer() {
+function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -125,3 +125,6 @@ export function Footer() {
     </footer>
   )
 }
+
+export { Footer }
+export default Footer

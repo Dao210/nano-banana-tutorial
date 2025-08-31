@@ -9,7 +9,7 @@ interface HeaderProps {
   currentPath?: string
 }
 
-export function Header({ currentPath = "/" }: HeaderProps) {
+function Header({ currentPath = "/" }: HeaderProps) {
   const isActive = (path: string) => currentPath === path
 
   return (
@@ -93,3 +93,6 @@ export function Header({ currentPath = "/" }: HeaderProps) {
     </header>
   )
 }
+
+export { Header }
+export default Header

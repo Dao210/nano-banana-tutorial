@@ -29,6 +29,7 @@ import {
 import Link from "next/link"
 import type { Metadata } from "next"
 import { Header } from "@/components/header"
+import Footer from "@/components/footer";
 import { SchemaOrg, BreadcrumbSchema } from "@/components/seo-schema"
 
 export const metadata: Metadata = {
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     tags: ["Setup", "Basics", "First Steps", "Beginner Guide", "AI Image Editing"],
     images: [
       {
-        url: "https://nanobanana.fans/tutorials/getting-started-cover.png",
+        url: " /Google-Nano-Banana-AI-Image-Generator-All-You-Need-To-Know.jpg",
         width: 1200,
         height: 630,
         alt: "Getting Started with Nano Banana AI Tutorial Cover",
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
     title: "Getting Started with Nano Banana AI - Complete Beginner's Guide",
     description:
       "Master Google's revolutionary Nano Banana AI image editing tool from scratch with our comprehensive beginner's guide.",
-    images: ["https://nanobanana.fans/tutorials/getting-started-cover.png"],
+    images: ["/Google-Nano-Banana-AI-Image-Generator-All-You-Need-To-Know.jpg"],
   },
 }
 
@@ -129,7 +130,7 @@ export default function GettingStartedPage() {
           title: tutorialData.title,
           description: tutorialData.description,
           url: "https://nanobanana.fans/tutorials/getting-started",
-          image: "https://nanobanana.fans/tutorials/getting-started-cover.png",
+          image: "/Google-Nano-Banana-AI-Image-Generator-All-You-Need-To-Know.jpg",
           datePublished: tutorialData.publishedAt,
           dateModified: tutorialData.updatedAt,
           author: {
@@ -1075,6 +1076,7 @@ export default function GettingStartedPage() {
           </aside>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

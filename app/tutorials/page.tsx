@@ -46,6 +46,8 @@ const featuredTutorials = [
     difficulty: "beginner",
     tags: ["Setup", "Basics", "First Steps"],
     featured: true,
+    cover: "/Google-Nano-Banana-AI-Image-Generator-All-You-Need-To-Know.jpg",
+    link: "/tutorials/getting-started",
   },
   {
     id: 2,
@@ -280,10 +282,12 @@ export default function TutorialsPage() {
                   .filter((t) => t.featured)
                   .map((tutorial) => (
                     <Card key={tutorial.id} className="group hover:shadow-lg transition-all duration-300">
-                      <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-lg flex items-center justify-center relative overflow-hidden">
-                        <ImageIcon className="h-16 w-16 text-primary/40" />
-                        <Badge className="absolute top-3 left-3">Featured</Badge>
-                      </div>
+                      <Link href={tutorial.link || '#'}>
+                        <div className="aspect-video rounded-t-lg overflow-hidden relative">
+                          <img src={tutorial.cover || "/placeholder.jpg"} alt={tutorial.title} className="w-full h-full object-cover" />
+                          <Badge className="absolute top-3 left-3">Featured</Badge>
+                        </div>
+                      </Link>
                       <CardHeader>
                         <div className="flex items-center gap-2 mb-2">
                           <Badge
@@ -307,7 +311,7 @@ export default function TutorialsPage() {
                           </div>
                         </div>
                         <CardTitle className="group-hover:text-primary transition-colors line-clamp-2">
-                          {tutorial.title}
+                          <Link href={tutorial.link || '#'}>{tutorial.title}</Link>
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
@@ -325,9 +329,12 @@ export default function TutorialsPage() {
                             variant="ghost"
                             size="sm"
                             className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                            asChild
                           >
-                            Read Tutorial
-                            <ArrowRight className="h-4 w-4 ml-1" />
+                            <Link href={tutorial.link || '#'}>
+                              Read Tutorial
+                              <ArrowRight className="h-4 w-4 ml-1" />
+                            </Link>
                           </Button>
                         </div>
                       </CardContent>

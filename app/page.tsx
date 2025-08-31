@@ -131,8 +131,12 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="group hover:shadow-lg transition-shadow">
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-lg flex items-center justify-center">
-                <ImageIcon className="h-12 w-12 text-primary/60" />
+              <div className="aspect-video rounded-t-lg overflow-hidden relative">
+                <img
+                  src="/Google-Nano-Banana-AI-Image-Generator-All-You-Need-To-Know.jpg"
+                  alt="Getting Started with Nano Banana"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardHeader>
                 <div className="flex items-center gap-2 mb-2">

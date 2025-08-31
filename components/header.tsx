@@ -14,8 +14,9 @@ function Header({ currentPath = "/" }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <div className="flex items-center justify-between w-full">
+      <div className="container flex h-16 items-center relative">
+        {/* 左侧导航，宽度与内容区对齐 */}
+        <div className="flex items-center h-full" style={{ minWidth: 220 }}>
           <nav className="hidden md:flex items-center space-x-6">
             <Link
               href="/"
@@ -48,40 +49,41 @@ function Header({ currentPath = "/" }: HeaderProps) {
               About
             </Link>
           </nav>
+        </div>
 
-          <div className="absolute left-1/2 transform -translate-x-1/2">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <Sparkles className="h-5 w-5 text-primary-foreground" />
+        {/* 居中Logo */}
+        <div className="absolute left-1/2 top-0 transform -translate-x-1/2 flex items-center h-full">
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
+              <Sparkles className="h-5 w-5 text-primary-foreground" />
+            </div>
+            <span className="font-bold text-xl text-primary font-[family-name:var(--font-space-grotesk)]">
+              Nano Banana
+            </span>
+          </Link>
+        </div>
+
+        {/* 右侧搜索和菜单 */}
+        <div className="flex items-center space-x-4 ml-auto">
+          <div className="hidden sm:block">
+            <SearchDialog>
+              <div className="relative cursor-pointer">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+                <Input placeholder="Search tutorials..." className="pl-10 w-64 cursor-pointer" readOnly />
               </div>
-              <span className="font-bold text-xl text-primary font-[family-name:var(--font-space-grotesk)]">
-                Nano Banana
-              </span>
-            </Link>
+            </SearchDialog>
           </div>
 
-          {/* Right-aligned search */}
-          <div className="flex items-center space-x-4">
-            <div className="hidden sm:block">
-              <SearchDialog>
-                <div className="relative cursor-pointer">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-                  <Input placeholder="Search tutorials..." className="pl-10 w-64 cursor-pointer" readOnly />
-                </div>
-              </SearchDialog>
-            </div>
-
-            <div className="sm:hidden">
-              <SearchDialog>
-                <Button variant="ghost" size="sm">
-                  <Search className="h-4 w-4" />
-                  <span className="sr-only">Search</span>
-                </Button>
-              </SearchDialog>
-            </div>
-
-            <MobileNav />
+          <div className="sm:hidden">
+            <SearchDialog>
+              <Button variant="ghost" size="sm">
+                <Search className="h-4 w-4" />
+                <span className="sr-only">Search</span>
+              </Button>
+            </SearchDialog>
           </div>
+
+          <MobileNav />
         </div>
       </div>
     </header>

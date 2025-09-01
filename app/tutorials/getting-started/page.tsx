@@ -31,6 +31,7 @@ import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import Footer from "@/components/footer";
 import { SchemaOrg, BreadcrumbSchema } from "@/components/seo-schema"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Getting Started with Nano Banana AI - Complete Beginner's Guide | Nano Banana Fans",
@@ -160,10 +161,13 @@ export default function GettingStartedPage() {
 
       {/* Hero Cover Image */}
       <div className="relative h-64 md:h-80 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 overflow-hidden">
-        <img
+        <Image
           src="/tutorials/getting-started-hero.png"
           alt="Nano Banana AI Tutorial - Before and after image editing examples"
-          className="w-full h-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
         <div className="absolute bottom-6 left-6 right-6">
@@ -303,10 +307,13 @@ export default function GettingStartedPage() {
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white p-6 rounded-lg border">
-                    <img
+                    <Image
                       src="/tutorials/nano-banana-before-after-1.png"
                       alt="Before and after: Character consistency example showing same person in different outfits"
+                      width={400}
+                      height={128}
                       className="w-full h-32 object-cover rounded-lg mb-4"
+                      loading="lazy"
                     />
                     <h3 className="font-semibold mb-2">Character Consistency Magic</h3>
                     <p className="text-sm text-muted-foreground">
@@ -316,10 +323,13 @@ export default function GettingStartedPage() {
                   </div>
 
                   <div className="bg-white p-6 rounded-lg border">
-                    <img
+                    <Image
                       src="/tutorials/nano-banana-multi-turn-example.png"
                       alt="Multi-turn editing example showing progressive image refinements"
+                      width={400}
+                      height={128}
                       className="w-full h-32 object-cover rounded-lg mb-4"
+                      loading="lazy"
                     />
                     <h3 className="font-semibold mb-2">Multi-Turn Precision</h3>
                     <p className="text-sm text-muted-foreground">
@@ -802,7 +812,7 @@ export default function GettingStartedPage() {
                         Master advanced techniques for maintaining character likeness across complex transformations and
                         multiple edits.
                       </p>
-                      <Link href="/tutorials/character-consistency">
+                      <Link href="/tutorials/character-consistency" title="Learn character consistency editing with Nano Banana AI">
                         <Button variant="outline" size="sm" className="w-full bg-transparent">
                           Start Learning
                           <ArrowRight className="h-4 w-4 ml-1" />
@@ -1031,7 +1041,7 @@ export default function GettingStartedPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {tutorialData.relatedTutorials.map((tutorial) => (
-                    <Link key={tutorial.id} href={`/tutorials/${tutorial.id}`} className="block">
+                    <Link key={tutorial.id} href={`/tutorials/${tutorial.id}`} className="block" title={`Read ${tutorial.title} tutorial`}>
                       <div className="flex gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
                         <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                           <ImageIcon className="h-6 w-6 text-primary/60" />

@@ -284,7 +284,7 @@ export default function TutorialsPage() {
                   .filter((t) => t.featured)
                   .map((tutorial) => (
                     <Card key={tutorial.id} className="group hover:shadow-lg transition-all duration-300">
-                      <Link href={tutorial.link || '#'}>
+                      <Link href={tutorial.link || '#'} title={tutorial.title}>
                         <div className="aspect-video rounded-t-lg overflow-hidden relative">
                           <img src={tutorial.cover || "/placeholder.jpg"} alt={tutorial.title} className="w-full h-full object-cover" />
                           <Badge className="absolute top-3 left-3">Featured</Badge>

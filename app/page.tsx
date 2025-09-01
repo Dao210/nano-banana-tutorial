@@ -40,13 +40,16 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>
-                <Link href="/tutorials">
+                <Link
+                  href="/tutorials"
+                  title="Browse comprehensive Nano Banana AI image editing tutorials"
+                >
                   <BookOpen className="mr-2 h-5 w-5" />
                   Explore Tutorials
                 </Link>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" asChild>
-                <Link href="/community">
+                <Link href="/community" title="Join the Nano Banana AI image editing community">
                   <Users className="mr-2 h-5 w-5" />
                   Join Community
                 </Link>
@@ -125,7 +128,7 @@ export default function HomePage() {
               <p className="text-muted-foreground">Start your Nano Banana journey with these popular guides</p>
             </div>
             <Button variant="outline" asChild>
-              <Link href="/tutorials">View All Tutorials</Link>
+              <Link href="/tutorials" title="View all Nano Banana AI tutorials">View All Tutorials</Link>
             </Button>
           </div>
 
@@ -157,15 +160,14 @@ export default function HomePage() {
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">15 min read</span>
-                  <div className="flex flex-col items-end">
-                    <Button variant="ghost" size="sm" asChild>
-                      <Link href="/tutorials/getting-started">Read More</Link>
-                    </Button>
-                    <span className="text-xs text-muted-foreground mt-1">
-                      Discover how to set up Nano Banana and create your first AI-powered image. Step-by-step for
-                      newcomers.
-                    </span>
-                  </div>
+                  <Button variant="ghost" size="sm" asChild>
+                    <Link
+                      href="/tutorials/getting-started"
+                      title="Getting started guide for Nano Banana AI image editing"
+                    >
+                      Read More
+                    </Link>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -196,14 +198,14 @@ export default function HomePage() {
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">25 min read</span>
-                  <div className="flex flex-col items-end">
-                    <Button variant="ghost" size="sm" asChild>
-                      <Link href="/tutorials/character-consistency">Read More</Link>
-                    </Button>
-                    <span className="text-xs text-muted-foreground mt-1">
-                      Learn proven techniques for keeping character faces consistent in every edit with Nano Banana AI.
-                    </span>
-                  </div>
+                  <Button variant="ghost" size="sm" asChild>
+                    <Link
+                      href="/tutorials/character-consistency"
+                      title="Tutorial on mastering character consistency with Nano Banana AI"
+                    >
+                      Read More
+                    </Link>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -230,14 +232,14 @@ export default function HomePage() {
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">35 min read</span>
-                  <div className="flex flex-col items-end">
-                    <Button variant="ghost" size="sm" asChild>
-                      <Link href="/tutorials/multi-turn-editing">Read More</Link>
-                    </Button>
-                    <span className="text-xs text-muted-foreground mt-1">
-                      Explore multi-turn editing workflows to achieve seamless, high-quality results with Nano Banana.
-                    </span>
-                  </div>
+                  <Button variant="ghost" size="sm" asChild>
+                    <Link
+                      href="/tutorials/multi-turn-editing"
+                      title="Advanced multi-turn editing techniques for Nano Banana AI"
+                    >
+                      Read More
+                    </Link>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -256,7 +258,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8" asChild>
-              <Link href="/tutorials">Start Learning Now</Link>
+              <Link href="/tutorials" title="Start learning Nano Banana AI image editing now">Start Learning Now</Link>
             </Button>
             <Button
               size="lg"
@@ -264,7 +266,7 @@ export default function HomePage() {
               className="text-lg px-8 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
               asChild
             >
-              <Link href="/tutorials">Browse All Tutorials</Link>
+              <Link href="/tutorials" title="Browse all Nano Banana AI image editing tutorials">Browse All Tutorials</Link>
             </Button>
           </div>
         </div>
@@ -303,22 +305,38 @@ export default function HomePage() {
               <h3 className="font-semibold mb-4">Tutorials</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <Link href="/tutorials/getting-started" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="/tutorials/getting-started"
+                    className="hover:text-foreground transition-colors"
+                    title="Nano Banana AI getting started tutorial"
+                  >
                     Getting Started
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tutorials/character-consistency" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="/tutorials/character-consistency"
+                    className="hover:text-foreground transition-colors"
+                    title="Nano Banana AI character consistency tutorial"
+                  >
                     Character Consistency
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tutorials/advanced-techniques" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="/tutorials/advanced-techniques"
+                    className="hover:text-foreground transition-colors"
+                    title="Nano Banana AI advanced techniques tutorial"
+                  >
                     Advanced Techniques
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tutorials/api-integration" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="/tutorials/api-integration"
+                    className="hover:text-foreground transition-colors"
+                    title="Nano Banana AI API integration tutorial"
+                  >
                     API Integration
                   </Link>
                 </li>
@@ -329,22 +347,38 @@ export default function HomePage() {
               <h3 className="font-semibold mb-4">Resources</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <Link href="/docs" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="/docs"
+                    className="hover:text-foreground transition-colors"
+                    title="Nano Banana AI documentation"
+                  >
                     Documentation
                   </Link>
                 </li>
                 <li>
-                  <Link href="/examples" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="/examples"
+                    className="hover:text-foreground transition-colors"
+                    title="Nano Banana AI image editing examples"
+                  >
                     Examples
                   </Link>
                 </li>
                 <li>
-                  <Link href="/community" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="/community"
+                    className="hover:text-foreground transition-colors"
+                    title="Nano Banana AI user community"
+                  >
                     Community
                   </Link>
                 </li>
                 <li>
-                  <Link href="/support" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="/support"
+                    className="hover:text-foreground transition-colors"
+                    title="Nano Banana AI support resources"
+                  >
                     Support
                   </Link>
                 </li>
@@ -364,13 +398,25 @@ export default function HomePage() {
           <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">© 2025 Nano Banana Fans. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="/privacy"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                title="Nano Banana privacy policy"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="/terms"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                title="Nano Banana terms of service"
+              >
                 Terms of Service
               </Link>
-              <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                href="/contact"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                title="Contact Nano Banana team"
+              >
                 Contact
               </Link>
             </div>

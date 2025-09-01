@@ -157,9 +157,15 @@ export default function HomePage() {
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">15 min read</span>
-                  <Button variant="ghost" size="sm" asChild>
-                    <Link href="/tutorials/getting-started">Read More</Link>
-                  </Button>
+                  <div className="flex flex-col items-end">
+                    <Button variant="ghost" size="sm" asChild>
+                      <Link href="/tutorials/getting-started">Read More</Link>
+                    </Button>
+                    <span className="text-xs text-muted-foreground mt-1">
+                      Discover how to set up Nano Banana and create your first AI-powered image. Step-by-step for
+                      newcomers.
+                    </span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -190,9 +196,14 @@ export default function HomePage() {
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">25 min read</span>
-                  <Button variant="ghost" size="sm" asChild>
-                    <Link href="/tutorials/character-consistency">Read More</Link>
-                  </Button>
+                  <div className="flex flex-col items-end">
+                    <Button variant="ghost" size="sm" asChild>
+                      <Link href="/tutorials/character-consistency">Read More</Link>
+                    </Button>
+                    <span className="text-xs text-muted-foreground mt-1">
+                      Learn proven techniques for keeping character faces consistent in every edit with Nano Banana AI.
+                    </span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -219,9 +230,14 @@ export default function HomePage() {
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">35 min read</span>
-                  <Button variant="ghost" size="sm" asChild>
-                    <Link href="/tutorials/multi-turn-editing">Read More</Link>
-                  </Button>
+                  <div className="flex flex-col items-end">
+                    <Button variant="ghost" size="sm" asChild>
+                      <Link href="/tutorials/multi-turn-editing">Read More</Link>
+                    </Button>
+                    <span className="text-xs text-muted-foreground mt-1">
+                      Explore multi-turn editing workflows to achieve seamless, high-quality results with Nano Banana.
+                    </span>
+                  </div>
                 </div>
               </CardContent>
             </Card>

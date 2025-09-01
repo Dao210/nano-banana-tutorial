@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sparkles, Github, Twitter, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function Footer() {
   return (
@@ -117,6 +118,7 @@ function Footer() {
           </div>
         </div>
       </div>
+      <SpeedInsights/>
     </footer>
   )
 }

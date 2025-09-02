@@ -1,30 +1,25 @@
-# Nano banana tutorial
+# Nano Banana Tutorial
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Welcome to the Nano Banana Tutorial project!
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/dao210s-projects/v0-nano-banana-tutorial)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/cZ00JA62gsi)
+## Purpose
 
-## Overview
+Nano Banana is dedicated to making blockchain and cryptocurrency concepts accessible to everyone. Our goal is to provide clear, practical tutorials and resources that help users understand and engage with the Nano Banana ecosystem.
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Vision
 
-## Deployment
+We believe in empowering individuals through education and community. By breaking down complex topics into simple, actionable guides, we hope to foster a welcoming environment for both newcomers and experienced enthusiasts.
 
-Your project is live at:
+## Get Started
 
-**[https://vercel.com/dao210s-projects/v0-nano-banana-tutorial](https://vercel.com/dao210s-projects/v0-nano-banana-tutorial)**
+Explore our tutorials and resources to learn more about Nano Banana and how you can get involved.
 
-## Build your app
+**Website:** [https://www.nanobanana.fans](https://www.nanobanana.fans)
 
-Continue building your app on:
+## Contributing
 
-**[https://v0.app/chat/projects/cZ00JA62gsi](https://v0.app/chat/projects/cZ00JA62gsi)**
+We welcome contributions from the community! If you have ideas, suggestions, or improvements, feel free to submit a pull request or open an issue.
 
-## How It Works
+## License
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+This project is open source and available under the MIT License.

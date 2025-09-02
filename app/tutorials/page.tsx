@@ -92,6 +92,8 @@ const featuredTutorials = [
     difficulty: "advanced",
     tags: ["Cinematic", "Scenes", "Creative"],
     featured: false,
+    cover: "/Cinematic Universes with Nano Banana.jpg",
+    link: "/tutorials/building-cinematic-universes",
   },
   {
     id: 5,

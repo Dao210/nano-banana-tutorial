@@ -212,7 +212,11 @@ export default function HomePage() {
 
             <Card className="group hover:shadow-lg transition-shadow">
               <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-t-lg flex items-center justify-center">
-                <Sparkles className="h-12 w-12 text-accent/60" />
+                  <img
+                  src="/Multi-Turn Editing.avif"             
+                  alt=" Multi-Turn Editing Techniques"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardHeader>
                 <div className="flex items-center gap-2 mb-2">

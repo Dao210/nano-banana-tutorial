@@ -8,6 +8,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { SchemaOrg } from "@/components/seo-schema"
+import { link } from "fs"
 
 export const metadata: Metadata = {
   title: "Nano Banana Tutorials - Complete Learning Library | AI Image Editing Guides",
@@ -76,6 +77,8 @@ const featuredTutorials = [
     difficulty: "advanced",
     tags: ["Multi-turn", "Complex", "Quality"],
     featured: false,
+    cover: "/Multi-Turn Editing.avif",
+    link: "/tutorials/multi-turn-editing",
   },
   {
     id: 4,
@@ -359,7 +362,7 @@ export default function TutorialsPage() {
                   <Card key={tutorial.id} className="group hover:shadow-md transition-all duration-300">
                     <div className="flex flex-col md:flex-row">
                       <div className="md:w-48 aspect-video md:aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <ImageIcon className="h-12 w-12 text-primary/40" />
+                        <img src={tutorial.cover || "/placeholder.jpg"} alt={tutorial.title} className="w-full h-full object-cover" />
                       </div>
                       <div className="flex-1">
                         <CardHeader>
@@ -398,6 +401,7 @@ export default function TutorialsPage() {
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-sm text-muted-foreground">{tutorial.views} views</span>
+                            <Link href={tutorial.link || '#'} title={tutorial.title}>
                             <Button
                               variant="ghost"
                               size="sm"
@@ -406,9 +410,11 @@ export default function TutorialsPage() {
                               Read Tutorial
                               <ArrowRight className="h-4 w-4 ml-1" />
                             </Button>
+                            </Link>
                           </div>
                         </CardContent>
                       </div>
+
                     </div>
                   </Card>
                 ))}

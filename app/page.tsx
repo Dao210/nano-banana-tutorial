@@ -161,12 +161,12 @@ export default function HomePage() {
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">15 min read</span>
                   <Button variant="ghost" size="sm" asChild>
-                    <Link
-                      href="/tutorials/getting-started"
-                      title="Getting started guide for Nano Banana AI image editing"
-                    >
-                      Read More
-                    </Link>
+                      <Link
+                        href="/tutorials/getting-started"
+                        title="Getting started guide for Nano Banana AI image editing"
+                      >
+                        Getting Started with Nano AI->
+                      </Link>
                   </Button>
                 </div>
               </CardContent>
@@ -189,7 +189,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <CardTitle className="group-hover:text-primary transition-colors">
-                  Character Consistency Mastery
+                  Character Consistency Mastery with Nano Banana AI
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -199,12 +199,12 @@ export default function HomePage() {
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">25 min read</span>
                   <Button variant="ghost" size="sm" asChild>
-                    <Link
-                      href="/tutorials/character-consistency"
-                      title="Tutorial on mastering character consistency with Nano Banana AI"
-                    >
-                      Read More
-                    </Link>
+                      <Link
+                        href="/tutorials/character-consistency"
+                        title="Tutorial on mastering character consistency with Nano Banana AI"
+                      >
+                        Character Consistency Mastery->
+                      </Link>
                   </Button>
                 </div>
               </CardContent>
@@ -237,12 +237,12 @@ export default function HomePage() {
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">35 min read</span>
                   <Button variant="ghost" size="sm" asChild>
-                    <Link
-                      href="/tutorials/multi-turn-editing"
-                      title="Advanced multi-turn editing techniques for Nano Banana AI"
-                    >
-                      Read More
-                    </Link>
+                      <Link
+                        href="/tutorials/multi-turn-editing"
+                        title="Advanced multi-turn editing techniques for Nano Banana AI"
+                      >
+                        Multi-Turn Editing Techniques->
+                      </Link>
                   </Button>
                 </div>
               </CardContent>

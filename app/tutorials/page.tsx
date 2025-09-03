@@ -107,6 +107,8 @@ const featuredTutorials = [
     difficulty: "intermediate",
     tags: ["Product", "Photography", "Marketing"],
     featured: false,
+    cover: "/Product Photography with AI.jpg",
+    link: "/tutorials/product-photography-with-ai",
   },
   {
     id: 6,

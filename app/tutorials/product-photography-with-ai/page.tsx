@@ -2,12 +2,14 @@ import React from "react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { SeoSchema } from "@/components/seo-schema";
+import { SchemaOrg, BreadcrumbSchema } from "@/components/seo-schema";
+import { Header } from "@/components/header"
+import Footer from "@/components/footer"
 
 export const metadata = {
   title: "Product Photography with AI | Nano Banana Tutorial",
   description:
-    "Transform ordinary product shots into professional marketing materials using Nano Banana's advanced editing capabilities. Discover how AI can elevate your brand imagery.",
+    "Transform ordinary product shots into professional marketing materials using Nano Banana's advanced AI editing. Elevate your brand imagery and boost sales with stunning visuals.",
   keywords: [
     "Nano Banana",
     "AI product photography",
@@ -18,11 +20,14 @@ export const metadata = {
     "photo enhancement",
     "ecommerce images",
     "brand imagery",
+    "visual storytelling",
+    "digital commerce",
   ],
+  url: "https://nonabanana.fans/tutorials/product-photography-with-ai",
   openGraph: {
     title: "Product Photography with AI | Nano Banana Tutorial",
     description:
-      "Transform ordinary product shots into professional marketing materials using Nano Banana's advanced editing capabilities.",
+      "Transform ordinary product shots into professional marketing materials using Nano Banana's advanced AI editing. Elevate your brand imagery and boost sales with stunning visuals.",
     images: [
       {
         url: "/tutorials/getting-started-cover.png",
@@ -35,54 +40,148 @@ export const metadata = {
 };
 
 export default function ProductPhotographyAI() {
+  // Tutorial stats and author info (customize as needed)
+  const stats = {
+    category: "Marketing",
+    difficulty: "Beginner",
+    readTime: "8 min",
+    rating: 4.8,
+    ratingCount: 112,
+    views: "5,200",
+    tags: [
+      "AI Product Photography",
+      "Nano Banana",
+      "Photo Enhancement",
+      "Brand Imagery",
+      "Tutorial",
+    ],
+    author: {
+      name: "Jane Smith",
+      avatar: "/placeholder-user.jpg",
+      bio: "AI Content Creator & Marketing Specialist",
+      followers: "3,400",
+      expertise: "AI Visuals, Product Marketing",
+    },
+  };
+
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12">
-      <SeoSchema metadata={metadata} />
-      <h1 className="text-4xl font-bold mb-4">Product Photography with AI</h1>
-      <Badge variant="outline" className="mb-6">Nano Banana Tutorial</Badge>
-      <Card className="mb-8">
-        <Image
-          src="/tutorials/getting-started-cover.png"
-          alt="Product Photography with AI"
-          width={800}
-          height={400}
-          className="rounded-lg object-cover w-full h-auto"
-        />
-      </Card>
-      <section className="prose prose-lg">
-        <p>
-          In the fast-paced world of digital commerce, captivating product imagery is the cornerstone of successful marketing. Yet, achieving studio-quality photos can be costly and time-consuming. Enter <strong>Nano Banana</strong>—an AI-powered editing tool that empowers creators and brands to transform ordinary product shots into stunning, professional-grade visuals with ease.
-        </p>
-        <h2>Elevate Your Brand with AI</h2>
-        <p>
-          Nano Banana leverages advanced artificial intelligence to enhance lighting, remove imperfections, and add creative flair to your product photos. Whether you're a small business owner or a seasoned marketer, you can now produce eye-catching images that drive engagement and boost sales—no expensive equipment required.
-        </p>
-        <h2>Step-by-Step Guide</h2>
-        <ol>
-          <li>
-            <strong>Upload Your Product Image:</strong> Start by selecting a clear photo of your product. Nano Banana works best with well-lit, high-resolution images.
-          </li>
-          <li>
-            <strong>Apply AI Enhancements:</strong> Use Nano Banana’s intuitive interface to adjust brightness, contrast, and background. The AI automatically detects and refines product edges for a polished look.
-          </li>
-          <li>
-            <strong>Customize for Your Brand:</strong> Add your logo, choose color themes, and experiment with creative effects to align your visuals with your brand identity.
-          </li>
-          <li>
-            <strong>Export & Share:</strong> Download your enhanced images in high resolution, ready for use across websites, social media, and marketing campaigns.
-          </li>
-        </ol>
-        <h2>Why Choose Nano Banana?</h2>
-        <ul>
-          <li>Effortless AI-powered editing for all skill levels</li>
-          <li>Consistent, professional results every time</li>
-          <li>Fast turnaround—perfect for busy creators</li>
-          <li>Flexible customization to match your brand</li>
-        </ul>
-        <p>
-          Unlock the full potential of your product photography and elevate your marketing materials with Nano Banana. Experience the future of visual storytelling—where creativity meets cutting-edge technology.
-        </p>
-      </section>
-    </main>
+    <>
+      <SchemaOrg type="article" data={metadata} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://nonabanana.fans" },
+          { name: "Tutorials", url: "https://nonabanana.fans/tutorials" },
+          { name: "Product Photography with AI", url: metadata.url },
+        ]}
+      />
+      <Header currentPath="/tutorials/product-photography-with-ai" />
+      <div className="container mx-auto px-4 py-10">
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Main Content */}
+          <main className="flex-1 max-w-3xl">
+            <h1 className="text-4xl font-bold mb-4 leading-tight text-center">
+              Product Photography with AI
+            </h1>
+            <Badge variant="outline" className="mb-6 mx-auto block">Nano Banana Tutorial</Badge>
+            <Card className="mb-8">
+              <Image
+                src="/tutorials/getting-started-cover.png"
+                alt="Product Photography with AI - Nano Banana"
+                width={800}
+                height={400}
+                className="rounded-lg object-cover w-full h-auto"
+                priority
+              />
+            </Card>
+            <section className="prose prose-lg mx-auto">
+              <p>
+                In today’s digital marketplace, compelling product imagery is essential for capturing attention and driving sales. Yet, creating professional-grade photos can be both expensive and time-consuming. <strong>Nano Banana</strong> revolutionizes this process, empowering brands and creators to transform ordinary product shots into stunning marketing assets—effortlessly.
+              </p>
+              <h2>Transform Your Brand’s Visual Storytelling</h2>
+              <p>
+                Harnessing the power of advanced AI, Nano Banana enhances lighting, removes imperfections, and adds creative polish to every image. Whether you’re a small business owner or a seasoned marketer, you can produce eye-catching visuals that elevate your brand and engage your audience—no studio required.
+              </p>
+              <h2>How to Create Professional Product Photos with Nano Banana</h2>
+              <ol>
+                <li>
+                  <strong>Upload Your Product Image:</strong> Choose a clear, well-lit photo of your product. High-resolution images yield the best results.
+                </li>
+                <li>
+                  <strong>Apply AI Enhancements:</strong> Instantly adjust brightness, contrast, and background. Nano Banana’s AI refines product edges and optimizes every detail for a polished finish.
+                </li>
+                <li>
+                  <strong>Customize for Your Brand:</strong> Add your logo, select color themes, and experiment with creative effects to ensure your visuals reflect your brand identity.
+                </li>
+                <li>
+                  <strong>Export & Share:</strong> Download your enhanced images in high resolution, ready for websites, social media, and marketing campaigns.
+                </li>
+              </ol>
+              <h2>Why Nano Banana?</h2>
+              <ul>
+                <li>Effortless, AI-powered editing for creators of all skill levels</li>
+                <li>Consistent, professional results every time</li>
+                <li>Lightning-fast turnaround—perfect for busy teams</li>
+                <li>Flexible customization to match your brand’s unique style</li>
+              </ul>
+              <p>
+                Unlock the full potential of your product photography and elevate your marketing materials with Nano Banana. Experience the future of visual storytelling—where creativity meets cutting-edge technology.
+              </p>
+            </section>
+          </main>
+          {/* Right Sidebar */}
+          <aside className="w-full lg:w-80 flex-shrink-0 space-y-6">
+            <Card className="p-6">
+              <div className="mb-4">
+                <span className="text-xs font-semibold uppercase text-muted-foreground">Tutorial Stats</span>
+              </div>
+              <div className="flex flex-wrap gap-3 mb-4">
+                <Badge variant="secondary" className="bg-green-100 text-green-800">
+                  {stats.category}
+                </Badge>
+                <Badge variant="secondary" className="bg-blue-100 text-blue-800">
+                  {stats.difficulty}
+                </Badge>
+                <Badge variant="secondary" className="bg-purple-100 text-purple-800">
+                  {stats.readTime}
+                </Badge>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                <span className="font-medium">Rating:</span>
+                <span className="text-yellow-600 font-bold">{stats.rating}</span>
+                <span>({stats.ratingCount} reviews)</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                <span className="font-medium">Views:</span>
+                <span>{stats.views}</span>
+              </div>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {stats.tags.map((tag) => (
+                  <Badge key={tag} variant="outline" className="text-xs hover:bg-primary/10 transition-colors">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            </Card>
+            <Card className="p-6 flex items-center gap-4">
+              <Image
+                src={stats.author.avatar}
+                alt={stats.author.name}
+                width={56}
+                height={56}
+                className="rounded-full object-cover border"
+              />
+              <div>
+                <div className="font-semibold text-lg">{stats.author.name}</div>
+                <div className="text-sm text-muted-foreground">{stats.author.bio}</div>
+                <div className="text-xs text-muted-foreground">
+                  {stats.author.followers} followers • {stats.author.expertise}
+                </div>
+              </div>
+            </Card>
+          </aside>
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 }

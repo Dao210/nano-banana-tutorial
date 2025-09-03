@@ -55,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "character-consistency",
     "multi-turn-editing",
     "building-cinematic-universes",
-    "product-photography",
+    "product-photography-with-ai",
     "api-integration",
     "style-transfer-techniques",
     "historical-photo-restoration",

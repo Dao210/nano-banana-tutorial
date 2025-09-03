@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
-import { Star, Users, BookOpen, Zap, ImageIcon, Palette, Sparkles } from "lucide-react"
+import { Star, Users, BookOpen, Zap, ImageIcon, Palette, Sparkles,ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { SchemaOrg } from "@/components/seo-schema"
@@ -165,7 +165,7 @@ export default function HomePage() {
                         href="/tutorials/getting-started"
                         title="Getting started guide for Nano Banana AI image editing"
                       >
-                        Getting Started with Nano AI->
+                        Getting Started with AI banana<ArrowRight className="h-4 w-4 ml-1" />
                       </Link>
                   </Button>
                 </div>
@@ -203,7 +203,7 @@ export default function HomePage() {
                         href="/tutorials/character-consistency"
                         title="Tutorial on mastering character consistency with Nano Banana AI"
                       >
-                        Character Consistency Mastery->
+                        Character Consistency Mastery<ArrowRight className="h-4 w-4 ml-1" />
                       </Link>
                   </Button>
                 </div>
@@ -241,7 +241,7 @@ export default function HomePage() {
                         href="/tutorials/multi-turn-editing"
                         title="Advanced multi-turn editing techniques for Nano Banana AI"
                       >
-                        Multi-Turn Editing Techniques->
+                        Multi-Turn Editing Techniques<ArrowRight className="h-4 w-4 ml-1" />
                       </Link>
                   </Button>
                 </div>

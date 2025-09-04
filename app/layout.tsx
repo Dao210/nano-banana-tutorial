@@ -98,7 +98,7 @@ export const metadata: Metadata = {
   },
   category: "Education",
   classification: "AI Image Editing Tutorials",
-  generator: "v0.app",
+  generator: "nanobanana",
 }
 
 export default function RootLayout({

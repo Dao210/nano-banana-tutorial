@@ -122,6 +122,8 @@ const featuredTutorials = [
     difficulty: "advanced",
     tags: ["API", "Integration", "Development"],
     featured: false,
+    cover: "/tutorials/API Integration Guide.jpg",
+    link: "/tutorials/api-integration",
   },
   {
     id: 7,

@@ -52,8 +52,8 @@ function Header({ currentPath = "/" }: HeaderProps) {
         {/* 居中Logo，flex-shrink-0防止压缩 */}
         <div className="flex-shrink-0 flex items-center justify-center mx-4">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-              <Sparkles className="h-5 w-5 text-primary-foreground" />
+            <div className="h-8 w-8 flex items-center justify-center">
+              <img src="/favicon.ico" alt="Logo" className="h-8 w-8" />
             </div>
             <span className="font-bold text-xl text-primary font-[family-name:var(--font-space-grotesk)]">
               Nano Banana

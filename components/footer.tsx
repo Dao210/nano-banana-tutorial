@@ -12,8 +12,8 @@ function Footer() {
           {/* Brand Section */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-cyan-600 flex items-center justify-center">
-                <Sparkles className="h-5 w-5 text-white" />
+              <div className="h-8 w-8 bg-cyan-600 flex items-center justify-center">
+                <img src="/favicon.ico" alt="Logo" className="h-8 w-8 text-white" />
               </div>
               <span className="font-bold text-xl text-white font-[family-name:var(--font-space-grotesk)]">
                 Nano Banana

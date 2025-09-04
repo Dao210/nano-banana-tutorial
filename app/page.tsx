@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
-import { Star, Users, BookOpen, Zap, ImageIcon, Palette, Sparkles,ArrowRight } from "lucide-react"
+import { Star, Users, BookOpen, Zap, ImageIcon, Palette, Sparkles,ArrowRight,Twitter } from "lucide-react"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { SchemaOrg } from "@/components/seo-schema"
@@ -282,8 +282,8 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                  <Sparkles className="h-5 w-5 text-primary-foreground" />
+                <div className="h-8 w-8 flex items-center justify-center">
+                  <img src="/favicon.ico" alt="Logo" className="h-8 w-8" />
                 </div>
                 <span className="font-bold text-xl text-primary font-[family-name:var(--font-space-grotesk)]">
                   Nano Banana
@@ -293,9 +293,12 @@ export default function HomePage() {
                 The ultimate resource for mastering Google's Nano Banana AI image editing technology.
               </p>
               <div className="flex space-x-4">
-                <Button variant="ghost" size="sm">
-                  Twitter
+                <Link href="https://twitter.com/Joe84742708" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white p-2">
+                  <Twitter className="h-4 w-4" />
                 </Button>
+              </Link>
+              
                 <Button variant="ghost" size="sm">
                   YouTube
                 </Button>
@@ -417,9 +420,9 @@ export default function HomePage() {
                 Terms of Service
               </Link>
               <Link
-                href="/contact"
+                href="mailto:idealtop@outlook.com"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                title="Contact Nano Banana team"
+                title="Email Nano Banana team"
               >
                 Contact
               </Link>

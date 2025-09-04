@@ -12,7 +12,7 @@ function Footer() {
           {/* Brand Section */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <div className="h-8 w-8 bg-cyan-600 flex items-center justify-center">
+              <div className="h-8 w-8 flex items-center justify-center">
                 <img src="/favicon.ico" alt="Logo" className="h-8 w-8 text-white" />
               </div>
               <span className="font-bold text-xl text-white font-[family-name:var(--font-space-grotesk)]">
@@ -26,9 +26,11 @@ function Footer() {
               <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white p-2">
                 <Github className="h-4 w-4" />
               </Button>
-              <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white p-2">
-                <Twitter className="h-4 w-4" />
-              </Button>
+              <Link href="https://twitter.com/Joe84742708" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white p-2">
+                  <Twitter className="h-4 w-4" />
+                </Button>
+              </Link>
               <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white p-2">
                 <Linkedin className="h-4 w-4" />
               </Button>
@@ -115,6 +117,13 @@ function Footer() {
             <Link href="/terms" className="text-slate-400 hover:text-white text-sm transition-colors">
               Terms of Service
             </Link>
+            <Link
+                href="mailto:idealtop@outlook.com"
+                className="text-slate-400 hover:text-white text-sm transition-colors"
+                title="Email Nano Banana team"
+              >
+                Contact
+              </Link>
           </div>
         </div>
       </div>

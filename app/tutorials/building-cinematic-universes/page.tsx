@@ -260,7 +260,7 @@ export default function BuildingCinematicUniversesPage() {
                   <li>Connect scenes for seamless visual storytelling</li>
                 </ul>
                 <Image
-                  src="/nano-banana-before-after-1.png"
+                  src="/tutorials/nano-banana-before-after-1.png"
                   alt="Cinematic scene transformation with Nano Banana AI"
                   width={800}
                   height={400}
@@ -293,7 +293,7 @@ export default function BuildingCinematicUniversesPage() {
                   </li>
                 </ol>
                 <Image
-                  src="/nano-banana-multi-turn-example.png"
+                  src="/tutorials/nano-banana-multi-turn-example.png"
                   alt="Multi-scene cinematic editing with Nano Banana AI"
                   width={800}
                   height={400}

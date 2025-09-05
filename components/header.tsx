@@ -24,6 +24,14 @@ function Header({ currentPath = "/" }: HeaderProps) {
             Home
           </Link>
           <Link
+            href="/prompts"
+            className={`text-sm font-medium transition-colors ${
+              isActive("/prompts") || currentPath?.startsWith("/prompts") ? "text-primary" : "hover:text-primary"
+            }`}
+          >
+            Prompts
+          </Link>          
+          <Link
             href="/tutorials"
             className={`text-sm font-medium transition-colors ${
               isActive("/tutorials") || currentPath?.startsWith("/tutorials") ? "text-primary" : "hover:text-primary"

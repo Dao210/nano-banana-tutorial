@@ -38,10 +38,10 @@ const Hero = () => {
             Transform your creative workflow with proven prompt templates that deliver stunning results.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-opacity shadow-golden">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="text-lg px-8">
               Explore Prompts
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="mr-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg">
               Learn More

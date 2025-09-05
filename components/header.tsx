@@ -14,7 +14,7 @@ function Header({ currentPath = "/" }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container mx-auto max-w-6xl px-4 flex h-16 items-center justify-between">
         {/* 左侧导航，与内容区左对齐 */}
         <nav className="hidden md:flex items-center space-x-6 flex-1 min-w-0">
           <Link
@@ -30,7 +30,7 @@ function Header({ currentPath = "/" }: HeaderProps) {
             }`}
           >
             Prompts
-          </Link>          
+          </Link>
           <Link
             href="/tutorials"
             className={`text-sm font-medium transition-colors ${

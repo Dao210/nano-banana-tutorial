@@ -102,7 +102,11 @@ const PromptCard = ({ title, description, prompt, category, previewImage, origin
           
           <Button
             onClick={handleCopyPrompt}
-            className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
+            className={`w-full transition-colors ${
+              isCopied
+                ? 'bg-blue-500 text-white hover:bg-blue-500'
+                : 'bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white'
+            }`}
             size="sm"
           >
             {isCopied ? (

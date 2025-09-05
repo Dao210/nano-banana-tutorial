@@ -64,13 +64,13 @@ const PromptPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header currentPath="/prompt" />
+      <Header currentPath="/prompts" />
       <main>
         <Hero />
 
         {/* Search & Sort Bar */}
         <section className="border-b bg-card/50">
-          <div className="container py-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <div className="container mx-auto max-w-6xl py-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div className="relative w-full md:max-w-md">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <Input

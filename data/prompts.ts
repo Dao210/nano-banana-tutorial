@@ -48,7 +48,7 @@ export const prompts: PromptData[] = [
     description: 'Convert photos into detailed pencil sketches with realistic shading and texture',
     prompt: 'Convert this photograph into a detailed pencil sketch artwork. Use realistic graphite pencil techniques with varying line weights and cross-hatching for shadows. Maintain the original composition while emphasizing contrast and detail. Create the appearance of being drawn on textured paper with subtle paper grain visible.',
     category: 'creative',
-    previewImage: '/prompt/sketch-art.jpg',
+    previewImage: '/prompt/Artistic Sketch Converter.webp',
   },
   {
     id: '5',
@@ -96,7 +96,7 @@ export const prompts: PromptData[] = [
     description: 'Apply high-end luxury branding aesthetics to product photos',
     prompt: 'Transform this product photo with luxury brand aesthetics. Use elegant, high-contrast lighting with dramatic shadows. Add premium materials and textures in the background. Create sophisticated color grading with deep blacks, crisp whites, and metallic accents. Make the overall composition feel exclusive and high-end.',
     category: 'ecommerce',
-    previewImage: '/prompt/product-minimal.jpg',
+    previewImage: '/prompt/Luxury Brand Aesthetic.jpg',
   },
   {
     id: '11',

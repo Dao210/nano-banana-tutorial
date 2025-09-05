@@ -16,7 +16,7 @@ interface CategoryFilterProps {
 const CategoryFilter = ({ categories, activeCategory, onCategoryChange }: CategoryFilterProps) => {
   return (
     <section className="py-8 border-b bg-muted/30">
-      <div className="container">
+      <div className="container mx-auto max-w-6xl">
         <div className="flex flex-wrap gap-2 justify-center">
           {categories.map((category) => (
             <Button
@@ -25,9 +25,9 @@ const CategoryFilter = ({ categories, activeCategory, onCategoryChange }: Catego
               size="sm"
               onClick={() => onCategoryChange(category.id)}
               className={`relative ${
-                activeCategory === category.id 
-                  ? "bg-gradient-primary text-primary-foreground shadow-golden" 
-                  : "hover:bg-accent"
+                activeCategory === category.id
+                  ? "bg-blue-500 hover:bg-blue-500 text-white shadow-golden"
+                  : "hover:bg-blue-500 hover:text-white"
               }`}
             >
               {category.label}

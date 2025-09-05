@@ -117,6 +117,91 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Prompt Library (New) */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-between mb-12">
+            <div>
+              <h2 className="text-3xl font-bold mb-2 font-[family-name:var(--font-space-grotesk)]">
+                Prompt Library
+              </h2>
+              <p className="text-muted-foreground">Curated prompt templates for faster, better AI results</p>
+            </div>
+            <Button variant="outline" asChild>
+              <Link href="/prompts" title="Browse all AI prompt templates">Browse Prompts</Link>
+            </Button>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Sparkles className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>Clean White Packshot</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Studio-style product shot on pure white with soft ground shadow and crisp edges.
+                </CardDescription>
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-sm text-muted-foreground">E‑commerce</span>
+                  <Button variant="ghost" size="sm" asChild>
+                    <Link href="/prompts" title="Open Prompt Library">
+                      Explore<ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="mx-auto w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                  <ImageIcon className="h-6 w-6 text-secondary" />
+                </div>
+                <CardTitle>Lifestyle Kitchen Scene</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Warm daylight from right, shallow depth, subtle tabletop reflection for realism.
+                </CardDescription>
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-sm text-muted-foreground">Lifestyle</span>
+                  <Button variant="ghost" size="sm" asChild>
+                    <Link href="/prompts" title="Open Prompt Library">
+                      Explore<ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="mx-auto w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                  <Sparkles className="h-6 w-6 text-accent" />
+                </div>
+                <CardTitle>Shadow‑Rich Editorial</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Dramatic, directional shadows with gradient charcoal background and texture emphasis.
+                </CardDescription>
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-sm text-muted-foreground">Editorial</span>
+                  <Button variant="ghost" size="sm" asChild>
+                    <Link href="/prompts" title="Open Prompt Library">
+                      Explore<ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Tutorials */}
       <section className="py-16 px-4">
         <div className="container mx-auto">

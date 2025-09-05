@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-subtle py-16 md:py-24">
+    <section className="relative overflow-hidden bg-gradient-subtle py-16 md:py-24 flex items-center">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/80 to-transparent"></div>
       </div>
       
-      <div className="container relative z-10">
+      <div className="container relative z-10 mx-auto max-w-6xl px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-accent px-3 py-1 rounded-full text-sm font-medium text-accent-foreground mb-6">
             <Sparkles className="h-4 w-4" />
@@ -48,13 +48,13 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center justify-center">
             <div>
-              <div className="text-2xl md:text-3xl font-bold text-primary">500+</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary">10+</div>
               <div className="text-sm text-muted-foreground">Curated Prompts</div>
             </div>
             <div>
-              <div className="text-2xl md:text-3xl font-bold text-primary">15+</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary">5+</div>
               <div className="text-sm text-muted-foreground">Categories</div>
             </div>
             <div>

@@ -7,6 +7,7 @@ import { Search, Star, Clock, Filter, BookOpen, Users, ImageIcon, Sparkles, Arro
 import Link from "next/link"
 import type { Metadata } from "next"
 import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { SchemaOrg } from "@/components/seo-schema"
 import { link } from "fs"
 
@@ -122,7 +123,7 @@ const featuredTutorials = [
     difficulty: "advanced",
     tags: ["API", "Integration", "Development"],
     featured: false,
-    cover: "/tutorials/API Integration Guide.jpg",
+    cover: "/tutorials/api-integration.jpg",
     link: "/tutorials/api-integration",
   },
   {
@@ -455,112 +456,7 @@ export default function TutorialsPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 border-t">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <Link href="/" className="flex items-center space-x-2 mb-4">
-                <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                  <Sparkles className="h-5 w-5 text-primary-foreground" />
-                </div>
-                <span className="font-bold text-xl text-primary font-[family-name:var(--font-space-grotesk)]">
-                  Nano Banana
-                </span>
-              </Link>
-              <p className="text-muted-foreground mb-4">
-                The ultimate resource for mastering Google's Nano Banana AI image editing technology.
-              </p>
-              <div className="flex space-x-4">
-                <Button variant="ghost" size="sm">
-                  Twitter
-                </Button>
-                <Button variant="ghost" size="sm">
-                  YouTube
-                </Button>
-                <Button variant="ghost" size="sm">
-                  Discord
-                </Button>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4">Tutorials</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
-                    Getting Started
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
-                    Character Consistency
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
-                    Advanced Techniques
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
-                    API Integration
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4">Resources</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
-                    Examples
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
-                    Community
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
-                    Support
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4">Stay Updated</h3>
-              <p className="text-sm text-muted-foreground mb-4">Get the latest tutorials and Nano Banana updates.</p>
-              <div className="flex gap-2">
-                <Input placeholder="Enter your email" className="flex-1" />
-                <Button size="sm">Subscribe</Button>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground">© 2024 Nano Banana Tutorial Platform. All rights reserved.</p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Contact
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

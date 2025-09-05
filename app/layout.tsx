@@ -20,22 +20,20 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nanobanana.fans"),
   title: {
-    default: "Nano Banana - AI Image Editing Tutorials & Guides",
-    template: "%s | Nano Banana Tutorials",
+    default: "Nano Banana - AI Image Editing Prompt & Guides",
+    template: "%s | Nano Banana Prompt",
   },
   description:
-    "Master Google's Nano Banana AI image editing with tutorials, step-by-step guides, and expert tips. Learn advanced techniques.",
+    "Master Google's Nano Banana AI image editing with Prompt, step-by-step guides, and expert tips. Learn advanced techniques.",
   keywords: [
     "Nano Banana",
     "Nano AI",
     "AI banana",
     "Gemini 2.5 Flash",
-    "AI tutorials",
-    "image generation",
-    "Google Gemini",
+    "nano prompt",
+    "Google nano",
     "digital art",
     "photo editing",
-    "AI tools",
   ],
   authors: [{ name: "Nano Banana Tutorial Platform", url: "https://nanobanana.fans" }],
   creator: "Nano Banana Tutorial Platform",
@@ -61,24 +59,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://nanobanana.fans",
     siteName: "Nano Banana Tutorial Platform",
-    title: "Nano Banana - AI Image Editing Tutorials & Guides",
-    description: "Master Google's Nano Banana AI image editing with comprehensive tutorials and expert guides.",
+    title: "Nano Banana - AI Image Editing Prompt & Guides",
+    description: "Master Google's Nano Banana AI image editing with comprehensive Prompt and expert guides.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Nano Banana AI Image Editing Tutorials",
+        alt: "Nano Banana AI Image Editing Prompt",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nano Banana - AI Image Editing Tutorials & Guides",
-    description: "Master Google's Nano Banana AI image editing with comprehensive tutorials and expert guides.",
+    title: "Nano Banana - AI Image Editing Prompt & Guides",
+    description: "Master Google's Nano Banana AI image editing with comprehensive Prompt and expert guides.",
     images: ["/og-image.jpg"],
-    creator: "@nanobananatutorials",
-    site: "@nanobananatutorials",
+    creator: "@nanobananaPrompt",
+    site: "@nanobananaPrompt",
   },
   verification: {
     google: "your-google-verification-code",
@@ -92,7 +90,7 @@ export const metadata: Metadata = {
     },
   },
   category: "Education",
-  classification: "AI Image Editing Tutorials",
+  classification: "AI Image Editing Prompt",
   generator: "nanobanana",
 }
 

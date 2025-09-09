@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Nano Banana",
     "Nano AI",
     "AI banana",
-    "Gemini 2.5 Flash",
+    "Gemini AI",
     "nano prompt",
     "Google nano",
     "digital art",
@@ -122,6 +122,8 @@ export default function RootLayout({
       `,
           }}
         />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129064418255763"
+     crossorigin="anonymous"></script>
       </head>
       <body className={`font-sans ${spaceGrotesk.variable} ${dmSans.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>

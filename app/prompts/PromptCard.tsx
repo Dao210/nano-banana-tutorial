@@ -82,7 +82,7 @@ const PromptCard = ({ title, description, prompt, category, previewImage, origin
         
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <h4 className="text-sm font-medium text-foreground">AI Prompt</h4>
+            <h4 className="text-sm font-medium text-foreground">Nano AI Prompt</h4>
             <Button
               variant="ghost"
               size="sm"

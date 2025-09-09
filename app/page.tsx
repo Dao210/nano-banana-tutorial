@@ -16,7 +16,7 @@ export default function HomePage() {
           title: "Nano Banana - AI Image Editing Tutorials & Guides",
           description:
             "Master Google's Nano Banana AI image editing with comprehensive tutorials, step-by-step guides, and expert tips.",
-          url: "https://nanobanana.fans",
+          url: "https://nanobanana.fans/",
           image: "https://nanobanana.fans/og-image.jpg",
           keywords: ["Nano Banana", "Google AI", "image editing", "AI tutorials", "character consistency"],
         }}

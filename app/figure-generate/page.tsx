@@ -30,7 +30,7 @@ const metadata = {
       "Generate stunning AI figures instantly using Nano Banana's advanced image generation API. Try the figure generator online and create unique visuals for your projects.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://nanobanana.fans/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Nano Banana AI Figure Generator",

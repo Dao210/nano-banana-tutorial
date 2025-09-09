@@ -141,13 +141,16 @@ export function SchemaOrg({ type, data }: SchemaOrgProps) {
   }
 
   return (
-    <Script
-      id="schema-org"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(getSchema()),
-      }}
-    />
+    <>
+      <link rel="canonical" href={data.url} />
+      <Script
+        id="schema-org"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getSchema()),
+        }}
+      />
+    </>
   )
 }
 

@@ -50,7 +50,7 @@ const Hero = () => {
           
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center justify-center">
             <div>
-              <div className="text-2xl md:text-3xl font-bold text-primary">10+</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary">20+</div>
               <div className="text-sm text-muted-foreground">Curated Prompts</div>
             </div>
             <div>

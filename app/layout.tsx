@@ -78,11 +78,6 @@ export const metadata: Metadata = {
     creator: "@nanobananaPrompt",
     site: "@nanobananaPrompt",
   },
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
-  },
   alternates: {
     canonical: "https://nanobanana.fans",
     languages: {

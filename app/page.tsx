@@ -397,7 +397,7 @@ export default function HomePage() {
                   target="_blank" rel="noopener noreferrer">
                   <img src="https://drchecker.net/api/badge?domain=www.nanobanana.fans"
                     alt="Monitor your Domain Rating with DRChecker "
-                    style="height: 54px; width: auto;" />
+                    className="h-8" />
                 </Link>
 
 

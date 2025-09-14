@@ -393,13 +393,13 @@ export default function HomePage() {
                   </Button>
                 </Link>
 
-                <a href="https://drchecker.net/item/www.nanobanana.fans"
+                <Link href="https://drchecker.net/item/www.nanobanana.fans"
                   target="_blank" rel="noopener noreferrer">
                   <img src="https://drchecker.net/api/badge?domain=www.nanobanana.fans"
                     alt="Monitor your Domain Rating with DRChecker "
                     style="height: 54px; width: auto;" />
-                </a>
-                
+                </Link>
+
 
                 <Button variant="ghost" size="sm">
                   Discord

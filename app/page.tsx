@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
-import { Star, Users, BookOpen, Zap, ImageIcon, Palette, Sparkles,ArrowRight,Twitter } from "lucide-react"
+import { Star, Users, BookOpen, Zap, ImageIcon, Palette, Sparkles, ArrowRight, Twitter } from "lucide-react"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { SchemaOrg } from "@/components/seo-schema"
@@ -39,7 +39,7 @@ export default function HomePage() {
               techniques. From character consistency to advanced multi-turn editing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8" asChild>
+              <Button size="lg" className="text-lg px-8" asChild>
                 <Link
                   href="/prompts"
                   title="Browse comprehensive Nano Banana AI image editing prompts"
@@ -255,12 +255,12 @@ export default function HomePage() {
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">15 min read</span>
                   <Button variant="ghost" size="sm" asChild>
-                      <Link
-                        href="/tutorials/getting-started"
-                        title="Getting started guide for Nano Banana AI image editing"
-                      >
-                        Getting Started with AI banana<ArrowRight className="h-4 w-4 ml-1" />
-                      </Link>
+                    <Link
+                      href="/tutorials/getting-started"
+                      title="Getting started guide for Nano Banana AI image editing"
+                    >
+                      Getting Started with AI banana<ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
                   </Button>
                 </div>
               </CardContent>
@@ -268,7 +268,7 @@ export default function HomePage() {
 
             <Card className="group hover:shadow-lg transition-shadow">
               <div className="aspect-video bg-gradient-to-br from-secondary/20 to-accent/20 rounded-t-lg flex items-center justify-center">
-                  <img
+                <img
                   src="/new-tutorial-master-consistent-character-faces-with-nanobanana.webp"
                   alt="Getting Started with Nano Banana"
                   className="w-full h-full object-cover"
@@ -293,12 +293,12 @@ export default function HomePage() {
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">25 min read</span>
                   <Button variant="ghost" size="sm" asChild>
-                      <Link
-                        href="/tutorials/character-consistency"
-                        title="Tutorial on mastering character consistency with Nano Banana AI"
-                      >
-                        Character Consistency Mastery<ArrowRight className="h-4 w-4 ml-1" />
-                      </Link>
+                    <Link
+                      href="/tutorials/character-consistency"
+                      title="Tutorial on mastering character consistency with Nano Banana AI"
+                    >
+                      Character Consistency Mastery<ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
                   </Button>
                 </div>
               </CardContent>
@@ -306,8 +306,8 @@ export default function HomePage() {
 
             <Card className="group hover:shadow-lg transition-shadow">
               <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-t-lg flex items-center justify-center">
-                  <img
-                  src="/Multi-Turn Editing.avif"             
+                <img
+                  src="/Multi-Turn Editing.avif"
                   alt=" Multi-Turn Editing Techniques"
                   className="w-full h-full object-cover"
                 />
@@ -331,12 +331,12 @@ export default function HomePage() {
                 <div className="flex items-center justify-between mt-4">
                   <span className="text-sm text-muted-foreground">35 min read</span>
                   <Button variant="ghost" size="sm" asChild>
-                      <Link
-                        href="/tutorials/multi-turn-editing"
-                        title="Advanced multi-turn editing techniques for Nano Banana AI"
-                      >
-                        Multi-Turn Editing Techniques<ArrowRight className="h-4 w-4 ml-1" />
-                      </Link>
+                    <Link
+                      href="/tutorials/multi-turn-editing"
+                      title="Advanced multi-turn editing techniques for Nano Banana AI"
+                    >
+                      Multi-Turn Editing Techniques<ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
                   </Button>
                 </div>
               </CardContent>
@@ -388,14 +388,18 @@ export default function HomePage() {
               </p>
               <div className="flex space-x-4">
                 <Link href="https://twitter.com/Joe84742708" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white p-2">
-                  <Twitter className="h-4 w-4" />
-                </Button>
-              </Link>
-              
-                <Button variant="ghost" size="sm">
-                  YouTube
-                </Button>
+                  <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white p-2">
+                    <Twitter className="h-4 w-4" />
+                  </Button>
+                </Link>
+
+                <a href="https://drchecker.net/item/www.nanobanana.fans"
+                  target="_blank" rel="noopener noreferrer">
+                  <img src="https://drchecker.net/api/badge?domain=www.nanobanana.fans"
+                    alt="Monitor your Domain Rating with DRChecker "
+                    style="height: 54px; width: auto;" />
+                </a>
+
                 <Button variant="ghost" size="sm">
                   Discord
                 </Button>

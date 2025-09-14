@@ -399,6 +399,7 @@ export default function HomePage() {
                     alt="Monitor your Domain Rating with DRChecker "
                     style="height: 54px; width: auto;" />
                 </a>
+                
 
                 <Button variant="ghost" size="sm">
                   Discord

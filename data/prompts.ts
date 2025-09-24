@@ -9,12 +9,12 @@ export interface PromptData {
 }
 
 export const categories = [
-  { id: 'all', label: 'All', count: 24 },
+  { id: 'all', label: 'All', count: 25 },
   { id: 'creative', label: 'Creative', count: 7 },
   { id: 'design', label: 'Design', count: 6 },
   { id: 'ecommerce', label: 'E-commerce', count: 4 },
   { id: 'photography', label: 'Photography', count: 4 },
-  { id: 'character', label: 'Character', count: 3 },
+  { id: 'character', label: 'Character', count: 4 },
 ];
 
 export const prompts: PromptData[] = [
@@ -210,5 +210,22 @@ export const prompts: PromptData[] = [
     category: 'character',
     previewImage: '/tutorials/api-integration.jpg',
   },
+  {
+    id: '25',
+    title: '3D Figurine Model Generator',
+    description: 'Transform images into detailed 3D figurine models with realistic textures and precise modeling',
+    prompt: 'Transform this image into a highly detailed 3D figurine model. Create a realistic three-dimensional representation with accurate proportions and anatomical details. Apply high-quality textures with realistic material properties such as skin, fabric, metal, or plastic as appropriate. Add precise surface details like fingerprints, fabric weave, or metallic scratches. Ensure proper lighting and shadows that highlight the 3D form and depth. Create a model that appears ready for 3D printing with realistic coloration and surface finishing. Maintain the character\'s essential features and expressions while adapting them to a three-dimensional format.',
+    category: 'character',
+    previewImage: '/prompt/3d girl.jpg',
+  },
+  {
+    id: '26',
+    title: 'Nano Banana Model Generator',
+    description: 'Create 3D models using the Nano Banana model with precision and detail',
+    prompt: 'Using the nano-banana model, create a 1/7 scale commercialized figurine of the characters in the picture, in a realistic style, in a real environment. The figurine is placed on a computer desk.The figurine has a round transparent acrylic base, with no text on the base. The content on the computer screen is the Zbrush modeling process of this figurine. Next to the computer screen is a BANDAI-style toy packaging box printed with the originalUsing the nano-banana model, create a 1/7 scale commercialized figurine of the characters in the picture, in a realistic style, in a real environment. The figurine is placed on a computer desk.The figurine has a round transparent acrylic base, with no text on the base. The content on the computer screen is the Zbrush modeling process of this figurine. Next to the computer screen is a BANDAI-style toy packaging box printed with the original.',
+    category: 'character',
+    previewImage: '/prompt/3d girl.jpg',
+  }
+  
 
 ];

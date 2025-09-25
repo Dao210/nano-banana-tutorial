@@ -5,6 +5,7 @@ import Footer from "@/components/footer"
 import Hero from "./Hero"
 import CategoryFilter from "./CategoryFilter"
 import PromptGrid from "./PromptGrid"
+import { PromptsSchema } from "./schema"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Search } from "lucide-react"
@@ -64,6 +65,7 @@ const PromptPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PromptsSchema />
       <Header currentPath="/prompts" />
       <main>
         <Hero />

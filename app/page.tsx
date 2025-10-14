@@ -393,11 +393,9 @@ export default function HomePage() {
                   </Button>
                 </Link>
 
-                <Link href="https://drchecker.net/item/www.nanobanana.fans"
-                  target="_blank" rel="noopener noreferrer">
-                  <img src="https://drchecker.net/api/badge?domain=www.nanobanana.fans"
-                    alt="Monitor your Domain Rating with DRChecker "
-                    className="h-8" />
+                <Link href="https://feele.net"
+                  target="_blank" rel="dofollow">
+                  Feele.net
                 </Link>
 
 

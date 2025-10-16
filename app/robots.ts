@@ -5,8 +5,20 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/private/", "/admin/", "/api/"],
+      disallow: [
+        "/private/",
+        "/admin/",
+        "/api/",
+        "/_next/",
+        "/studio/",
+        "/studio/*",
+        "/api/*",
+        "/admin/*",
+        "/private/*"
+      ],
+      crawlDelay: 1,
     },
     sitemap: "https://nanobanana.fans/sitemap.xml",
+    host: "https://nanobanana.fans",
   }
 }

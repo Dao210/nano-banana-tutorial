@@ -41,15 +41,15 @@ const PromptCard = ({ title, description, prompt, category, previewImage, origin
   const truncatedPrompt = prompt.length > 150 ? prompt.substring(0, 150) + "..." : prompt;
 
   return (
-    <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-card hover:-translate-y-1 bg-card/50 backdrop-blur border-border/50">
+    <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 tech-card hover:scale-105">
       <div className="relative overflow-hidden">
         <img 
           src={previewImage} 
           alt={title}
-          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground">
+        <div className="absolute inset-0 tech-gradient opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+        <Badge className="absolute top-3 left-3 tech-glow tech-gradient text-white border-0">
           {category}
         </Badge>
       </div>
@@ -73,7 +73,7 @@ const PromptCard = ({ title, description, prompt, category, previewImage, origin
                   key={index}
                   src={image} 
                   alt={`Original ${index + 1}`}
-                  className="w-16 h-16 object-cover rounded border border-border"
+                  className="w-16 h-16 object-cover rounded border border-border hover:scale-110 transition-transform"
                 />
               ))}
             </div>
@@ -87,14 +87,14 @@ const PromptCard = ({ title, description, prompt, category, previewImage, origin
               variant="ghost"
               size="sm"
               onClick={() => setShowFullPrompt(!showFullPrompt)}
-              className="text-xs"
+              className="text-xs tech-gradient tech-text hover:bg-transparent"
             >
               <Eye className="h-3 w-3 mr-1" />
               {showFullPrompt ? 'Show Less' : 'Show More'}
             </Button>
           </div>
           
-          <div className="bg-muted/50 rounded-lg p-3 border border-border/50">
+          <div className="glass rounded-lg p-3 border border-border/50">
             <p className="text-sm text-muted-foreground font-mono leading-relaxed">
               {showFullPrompt ? prompt : truncatedPrompt}
             </p>
@@ -102,10 +102,10 @@ const PromptCard = ({ title, description, prompt, category, previewImage, origin
           
           <Button
             onClick={handleCopyPrompt}
-            className={`w-full transition-colors ${
+            className={`w-full transition-all duration-300 tech-button ${
               isCopied
-                ? 'bg-blue-500 text-white hover:bg-blue-500'
-                : 'bg-gray-200 text-gray-700 hover:bg-blue-500 hover:text-white'
+                ? 'tech-gradient text-white'
+                : 'tech-gradient-secondary hover:scale-105'
             }`}
             size="sm"
           >

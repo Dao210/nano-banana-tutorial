@@ -8,7 +8,23 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { SchemaOrg } from "@/components/seo-schema"
+import dynamic from 'next/dynamic'
+
+// 动态导入SEO组件以避免ChunkLoadError
+const SchemaOrg = dynamic(() => import("@/components/seo-schema").then(mod => ({ default: mod.SchemaOrg })), {
+  ssr: true,
+  loading: () => null
+})
+
+const BreadcrumbSchema = dynamic(() => import("@/components/seo-schema").then(mod => ({ default: mod.BreadcrumbSchema })), {
+  ssr: true,
+  loading: () => null
+})
+
+const CourseSchema = dynamic(() => import("@/components/seo-schema").then(mod => ({ default: mod.CourseSchema })), {
+  ssr: true,
+  loading: () => null
+})
 import { link } from "fs"
 
 export const metadata: Metadata = {
@@ -26,10 +42,10 @@ export const metadata: Metadata = {
 }
 
 const tutorialCategories = [
-  { id: "all", name: "All Tutorials", count: 24 },
+  { id: "all", name: "All Tutorials", count: 27 },
   { id: "beginner", name: "Beginner", count: 8 },
-  { id: "intermediate", name: "Intermediate", count: 10 },
-  { id: "advanced", name: "Advanced", count: 6 },
+  { id: "intermediate", name: "Intermediate", count: 12 },
+  { id: "advanced", name: "Advanced", count: 7 },
   { id: "character-consistency", name: "Character Consistency", count: 5 },
   { id: "multi-turn-editing", name: "Multi-turn Editing", count: 4 },
   { id: "api-integration", name: "API Integration", count: 3 },
@@ -138,33 +154,88 @@ const featuredTutorials = [
     difficulty: "intermediate",
     tags: ["Style", "Transfer", "Artistic"],
     featured: false,
+    cover: "/tutorials/style-transfer-techniques.jpg",
+    link: "/tutorials/style-transfer-techniques",
   },
   {
     id: 8,
-    title: "Historical Photo Restoration",
+    title: "Prompt Engineering Mastery",
     description:
-      "Breathe new life into old photographs with colorization, repair, and enhancement techniques using AI.",
-    category: "Intermediate",
-    readTime: "28 min",
-    rating: 4.8,
-    views: "6.9k",
-    difficulty: "intermediate",
-    tags: ["Restoration", "Historical", "Colorization"],
+      "Master the art of crafting effective prompts that generate exactly what you envision with Nano Banana AI.",
+    category: "Advanced",
+    readTime: "25 min",
+    rating: 4.9,
+    views: "12.5k",
+    difficulty: "advanced",
+    tags: ["Prompt Engineering", "AI Writing", "Advanced Techniques"],
     featured: false,
+    cover: "/tutorials/prompt-engineering-cover.jpg",
+    link: "/tutorials/prompt-engineering",
+  },
+  {
+    id: 9,
+    title: "Advanced Techniques with Nano Banana AI",
+    description:
+      "Elevate your Nano Banana skills to a professional level with these advanced techniques for complex image editing tasks.",
+    category: "Advanced",
+    readTime: "28 min",
+    rating: 4.9,
+    views: "9.8k",
+    difficulty: "advanced",
+    tags: ["Advanced Techniques", "Professional Workflows", "Creative Editing"],
+    featured: false,
+    cover: "/tutorials/advanced-techniques-cover.jpg",
+    link: "/tutorials/advanced-techniques",
   },
 ]
 
 export default function TutorialsPage() {
   return (
     <div className="min-h-screen bg-background">
+      {/* SEO Schema Components */}
       <SchemaOrg
         type="website"
         data={{
           title: "Nano Banana Tutorials - Complete Learning Library",
           description:
-            "Browse our comprehensive collection of Nano Banana AI tutorials. From beginner guides to advanced techniques.",
+            "Browse our comprehensive collection of Nano Banana AI tutorials. From beginner guides to advanced techniques, master Google's revolutionary image editing technology.",
           url: "https://nanobanana.fans/tutorials",
-          keywords: ["Nano Banana tutorials", "AI image editing guides", "Google Gemini tutorials"],
+          keywords: ["Nano Banana tutorials", "AI image editing guides", "Google Gemini tutorials", "character consistency", "multi-turn editing", "AI photography"],
+        }}
+      />
+      
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://nanobanana.fans/" },
+          { name: "Tutorials", url: "https://nanobanana.fans/tutorials" }
+        ]}
+      />
+      
+      <CourseSchema
+        data={{
+          name: "Nano Banana AI Image Editing Mastery Course",
+          description: "Comprehensive course covering all aspects of Google's Nano Banana AI image editing technology, from beginner basics to advanced professional techniques.",
+          url: "https://nanobanana.fans/tutorials",
+          provider: "Nano Banana Tutorial Platform",
+          educationalLevel: "Beginner to Advanced",
+          inLanguage: "en",
+          about: "AI Image Editing with Google's Nano Banana",
+          teaches: [
+            "Character consistency techniques",
+            "Multi-turn editing strategies",
+            "Prompt engineering for Nano Banana",
+            "Digital art creation with AI",
+            "Photo enhancement and manipulation",
+            "Style transfer techniques",
+            "API integration methods",
+            "Cinematic scene creation",
+            "Product photography enhancement"
+          ],
+          duration: "PT3H",
+          hasCourseInstance: {
+            courseMode: "online",
+            instructor: "Nano Banana Tutorial Platform"
+          }
         }}
       />
 
@@ -253,7 +324,7 @@ export default function TutorialsPage() {
                       <BookOpen className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <div className="font-semibold">24</div>
+                      <div className="font-semibold">27</div>
                       <div className="text-sm text-muted-foreground">Total Tutorials</div>
                     </div>
                   </div>

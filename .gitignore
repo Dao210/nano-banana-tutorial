@@ -19,6 +19,10 @@ yarn-error.log*
 # env files
 .env*
 
+# plan and tasks
+IFLOW.md
+requirements and tasks
+
 # vercel
 .vercel
 

@@ -5,41 +5,92 @@ import { Input } from "@/components/ui/input"
 import { Star, Users, BookOpen, Zap, ImageIcon, Palette, Sparkles, ArrowRight, Twitter } from "lucide-react"
 import Link from "next/link"
 import { Header } from "@/components/header"
-import { SchemaOrg } from "@/components/seo-schema"
+import dynamic from 'next/dynamic'
+
+// 动态导入SEO组件以避免ChunkLoadError
+const SchemaOrg = dynamic(() => import("@/components/seo-schema").then(mod => ({ default: mod.SchemaOrg })), {
+  ssr: true,
+  loading: () => null
+})
+
+const BreadcrumbSchema = dynamic(() => import("@/components/seo-schema").then(mod => ({ default: mod.BreadcrumbSchema })), {
+  ssr: true,
+  loading: () => null
+})
+
+const CourseSchema = dynamic(() => import("@/components/seo-schema").then(mod => ({ default: mod.CourseSchema })), {
+  ssr: true,
+  loading: () => null
+})
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background tech-grid">
+      {/* SEO Schema Components */}
       <SchemaOrg
         type="website"
         data={{
           title: "Nano Banana - AI Image Editing Tutorials & Guides",
           description:
-            "Master Google's Nano Banana AI image editing with comprehensive tutorials, step-by-step guides, and expert tips.",
+            "Master Google's Nano Banana AI image editing with comprehensive tutorials, step-by-step guides, and expert tips. Learn advanced techniques for AI-powered photo editing, digital art creation, and visual content generation.",
           url: "https://nanobanana.fans/",
           image: "https://nanobanana.fans/og-image.jpg",
-          keywords: ["Nano Banana", "Google AI", "image editing", "AI tutorials", "character consistency"],
+          keywords: ["Nano Banana", "Google AI", "image editing", "AI tutorials", "character consistency", "AI prompts", "digital art", "photo editing"],
+        }}
+      />
+      
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://nanobanana.fans/" }
+        ]}
+      />
+      
+      <CourseSchema
+        data={{
+          name: "Nano Banana AI Image Editing Mastery",
+          description: "Comprehensive course covering all aspects of Google's Nano Banana AI image editing technology, from beginner basics to advanced techniques.",
+          url: "https://nanobanana.fans/",
+          provider: "Nano Banana Tutorial Platform",
+          educationalLevel: "Beginner to Advanced",
+          inLanguage: "en",
+          about: "AI Image Editing with Google's Nano Banana",
+          teaches: [
+            "Character consistency techniques",
+            "Multi-turn editing strategies",
+            "Prompt engineering for Nano Banana",
+            "Digital art creation with AI",
+            "Photo enhancement and manipulation",
+            "Style transfer techniques",
+            "API integration methods"
+          ],
+          duration: "PT2H",
+          hasCourseInstance: {
+            courseMode: "online",
+            instructor: "Nano Banana Tutorial Platform"
+          }
         }}
       />
 
       <Header currentPath="/" />
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 tech-gradient opacity-5"></div>
+        <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-4">
+            <Badge className="mb-4 tech-glow tech-gradient-accent text-white border-0">
+              <Sparkles className="mr-2 h-4 w-4" />
               Google's Latest AI Innovation
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6 font-[family-name:var(--font-space-grotesk)]">
-              Master <span className="text-primary">Nano Banana</span> AI Image Editing
+            <h1 className="text-4xl md:text-7xl font-bold text-balance mb-6 font-[family-name:var(--font-space-grotesk)]">
+              Master <span className="tech-text">Nano Banana</span> AI Image Editing
             </h1>
-            <p className="text-xl text-muted-foreground text-pretty mb-8 leading-relaxed">
+            <p className="text-xl text-muted-foreground text-pretty mb-8 leading-relaxed max-w-3xl mx-auto">
               Learn Google's revolutionary Nano Banana AI with comprehensive tutorials, step-by-step guides, and expert
               techniques. From character consistency to advanced multi-turn editing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8" asChild>
+              <Button size="lg" className="text-lg px-8 tech-button tech-glow" asChild>
                 <Link
                   href="/prompts"
                   title="Browse comprehensive Nano Banana AI image editing prompts"
@@ -48,7 +99,7 @@ export default function HomePage() {
                   Explore Prompts
                 </Link>
               </Button>
-              <Button size="lg" className="text-lg px-8" asChild>
+              <Button size="lg" className="text-lg px-8 tech-button tech-glow" variant="outline" asChild>
                 <Link
                   href="/tutorials"
                   title="Browse comprehensive Nano Banana AI image editing tutorials"
@@ -57,7 +108,7 @@ export default function HomePage() {
                   Explore Tutorials
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8 glass tech-glow" asChild>
                 <Link href="/community" title="Join the Nano Banana AI image editing community">
                   <Users className="mr-2 h-5 w-5" />
                   Join Community
@@ -69,10 +120,10 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 bg-card">
+      <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 font-[family-name:var(--font-space-grotesk)]">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 font-[family-name:var(--font-space-grotesk)] tech-text">
               Why Choose Our Platform?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -81,43 +132,43 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center">
+            <Card className="text-center tech-card tech-float">
               <CardHeader>
-                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="h-6 w-6 text-primary" />
+                <div className="mx-auto w-16 h-16 tech-gradient rounded-full flex items-center justify-center mb-4 tech-glow">
+                  <Zap className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Expert Tutorials</CardTitle>
+                <CardTitle className="text-xl">Expert Tutorials</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-base">
                   Step-by-step guides from beginner basics to advanced techniques, all created by AI experts.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center tech-card tech-float" style={{ animationDelay: '0.2s' }}>
               <CardHeader>
-                <div className="mx-auto w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                  <ImageIcon className="h-6 w-6 text-secondary" />
+                <div className="mx-auto w-16 h-16 tech-gradient-accent rounded-full flex items-center justify-center mb-4 tech-glow">
+                  <ImageIcon className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Real Examples</CardTitle>
+                <CardTitle className="text-xl">Real Examples</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-base">
                   Practical examples with before/after comparisons and detailed explanations of each editing process.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center tech-card tech-float" style={{ animationDelay: '0.4s' }}>
               <CardHeader>
-                <div className="mx-auto w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-                  <Palette className="h-6 w-6 text-accent" />
+                <div className="mx-auto w-16 h-16 tech-gradient-secondary rounded-full flex items-center justify-center mb-4 tech-glow">
+                  <Palette className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Latest Updates</CardTitle>
+                <CardTitle className="text-xl">Latest Updates</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-base">
                   Stay current with the latest Nano Banana features, updates, and best practices as they're released.
                 </CardDescription>
               </CardContent>
@@ -127,35 +178,36 @@ export default function HomePage() {
       </section>
 
       {/* Prompt Library (New) */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
+      <section className="py-16 px-4 relative">
+        <div className="absolute inset-0 tech-gradient-secondary opacity-5"></div>
+        <div className="container mx-auto relative z-10">
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h2 className="text-3xl font-bold mb-2 font-[family-name:var(--font-space-grotesk)]">
-                Prompt Library
+              <h2 className="text-3xl md:text-5xl font-bold mb-2 font-[family-name:var(--font-space-grotesk)]">
+                Prompt <span className="tech-text">Library</span>
               </h2>
-              <p className="text-muted-foreground">Curated prompt templates for faster, better AI results</p>
+              <p className="text-muted-foreground text-lg">Curated prompt templates for faster, better AI results</p>
             </div>
-            <Button variant="outline" asChild>
+            <Button className="tech-button tech-glow" asChild>
               <Link href="/prompts" title="Browse all AI prompt templates">Browse Prompts</Link>
             </Button>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="group hover:shadow-lg transition-shadow">
+            <Card className="group tech-card hover:scale-105 transition-all duration-300">
               <CardHeader>
-                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Sparkles className="h-6 w-6 text-primary" />
+                <div className="mx-auto w-16 h-16 tech-gradient rounded-full flex items-center justify-center mb-4 tech-glow tech-pulse">
+                  <Sparkles className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Clean White Packshot</CardTitle>
+                <CardTitle className="text-xl">Clean White Packshot</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-base">
                   Studio-style product shot on pure white with soft ground shadow and crisp edges.
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
-                  <span className="text-sm text-muted-foreground">E‑commerce</span>
-                  <Button variant="ghost" size="sm" asChild>
+                  <Badge className="tech-glow">E‑commerce</Badge>
+                  <Button variant="ghost" size="sm" className="tech-gradient tech-text group-hover:bg-transparent" asChild>
                     <Link href="/prompts" title="Open Prompt Library">
                       Explore<ArrowRight className="h-4 w-4 ml-1" />
                     </Link>
@@ -164,20 +216,20 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-lg transition-shadow">
+            <Card className="group tech-card hover:scale-105 transition-all duration-300">
               <CardHeader>
-                <div className="mx-auto w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                  <ImageIcon className="h-6 w-6 text-secondary" />
+                <div className="mx-auto w-16 h-16 tech-gradient-accent rounded-full flex items-center justify-center mb-4 tech-glow tech-pulse">
+                  <ImageIcon className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Lifestyle Kitchen Scene</CardTitle>
+                <CardTitle className="text-xl">Lifestyle Kitchen Scene</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-base">
                   Warm daylight from right, shallow depth, subtle tabletop reflection for realism.
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
-                  <span className="text-sm text-muted-foreground">Lifestyle</span>
-                  <Button variant="ghost" size="sm" asChild>
+                  <Badge className="tech-glow">Lifestyle</Badge>
+                  <Button variant="ghost" size="sm" className="tech-gradient-accent tech-text group-hover:bg-transparent" asChild>
                     <Link href="/prompts" title="Open Prompt Library">
                       Explore<ArrowRight className="h-4 w-4 ml-1" />
                     </Link>
@@ -186,20 +238,20 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-lg transition-shadow">
+            <Card className="group tech-card hover:scale-105 transition-all duration-300">
               <CardHeader>
-                <div className="mx-auto w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-                  <Sparkles className="h-6 w-6 text-accent" />
+                <div className="mx-auto w-16 h-16 tech-gradient-secondary rounded-full flex items-center justify-center mb-4 tech-glow tech-pulse">
+                  <Sparkles className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle>Shadow‑Rich Editorial</CardTitle>
+                <CardTitle className="text-xl">Shadow‑Rich Editorial</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-base">
                   Dramatic, directional shadows with gradient charcoal background and texture emphasis.
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
-                  <span className="text-sm text-muted-foreground">Editorial</span>
-                  <Button variant="ghost" size="sm" asChild>
+                  <Badge className="tech-glow">Editorial</Badge>
+                  <Button variant="ghost" size="sm" className="tech-gradient-secondary tech-text group-hover:bg-transparent" asChild>
                     <Link href="/prompts" title="Open Prompt Library">
                       Explore<ArrowRight className="h-4 w-4 ml-1" />
                     </Link>
@@ -212,130 +264,134 @@ export default function HomePage() {
       </section>
 
       {/* Featured Tutorials */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
+      <section className="py-16 px-4 relative">
+        <div className="absolute inset-0 tech-gradient-accent opacity-5"></div>
+        <div className="container mx-auto relative z-10">
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h2 className="text-3xl font-bold mb-2 font-[family-name:var(--font-space-grotesk)]">
-                Featured Tutorials
+              <h2 className="text-3xl md:text-5xl font-bold mb-2 font-[family-name:var(--font-space-grotesk)]">
+                Featured <span className="tech-text">Tutorials</span>
               </h2>
-              <p className="text-muted-foreground">Start your Nano Banana journey with these popular guides</p>
+              <p className="text-muted-foreground text-lg">Start your Nano Banana journey with these popular guides</p>
             </div>
-            <Button variant="outline" asChild>
+            <Button className="tech-button tech-glow" asChild>
               <Link href="/tutorials" title="View all Nano Banana AI tutorials">View All Tutorials</Link>
             </Button>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="group hover:shadow-lg transition-shadow">
+            <Card className="group tech-card hover:scale-105 transition-all duration-300">
               <div className="aspect-video rounded-t-lg overflow-hidden relative">
                 <img
                   src="/Google-Nano-Banana-AI-Image-Generator-All-You-Need-To-Know.jpg"
                   alt="Getting Started with Nano Banana"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 tech-gradient opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
               <CardHeader>
                 <div className="flex items-center gap-2 mb-2">
-                  <Badge variant="secondary">Beginner</Badge>
+                  <Badge className="tech-glow">Beginner</Badge>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Star className="h-4 w-4 fill-current text-yellow-500 mr-1" />
                     4.9
                   </div>
                 </div>
-                <CardTitle className="group-hover:text-primary transition-colors">
+                <CardTitle className="group-hover:text-primary transition-colors text-xl">
                   Getting Started with Nano Banana
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-base">
                   Learn the basics of Google's Nano Banana AI, from setup to your first image edit. Perfect for complete
                   beginners.
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
-                  <span className="text-sm text-muted-foreground">15 min read</span>
-                  <Button variant="ghost" size="sm" asChild>
+                  <Badge variant="outline">15 min read</Badge>
+                  <Button variant="ghost" size="sm" className="tech-gradient tech-text group-hover:bg-transparent" asChild>
                     <Link
                       href="/tutorials/getting-started"
                       title="Getting started guide for Nano Banana AI image editing"
                     >
-                      Getting Started with AI banana<ArrowRight className="h-4 w-4 ml-1" />
+                      Start Learning<ArrowRight className="h-4 w-4 ml-1" />
                     </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-lg transition-shadow">
-              <div className="aspect-video bg-gradient-to-br from-secondary/20 to-accent/20 rounded-t-lg flex items-center justify-center">
+            <Card className="group tech-card hover:scale-105 transition-all duration-300">
+              <div className="aspect-video rounded-t-lg overflow-hidden relative">
                 <img
                   src="/new-tutorial-master-consistent-character-faces-with-nanobanana.webp"
-                  alt="Getting Started with Nano Banana"
-                  className="w-full h-full object-cover"
+                  alt="Character Consistency with Nano Banana"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 tech-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
               <CardHeader>
                 <div className="flex items-center gap-2 mb-2">
-                  <Badge variant="outline">Intermediate</Badge>
+                  <Badge className="tech-glow">Intermediate</Badge>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Star className="h-4 w-4 fill-current text-yellow-500 mr-1" />
                     4.8
                   </div>
                 </div>
-                <CardTitle className="group-hover:text-primary transition-colors">
-                  Character Consistency Mastery with Nano Banana AI
+                <CardTitle className="group-hover:text-primary transition-colors text-xl">
+                  Character Consistency Mastery
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-base">
                   Master the art of maintaining character likeness across multiple edits and transformations.
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
-                  <span className="text-sm text-muted-foreground">25 min read</span>
-                  <Button variant="ghost" size="sm" asChild>
+                  <Badge variant="outline">25 min read</Badge>
+                  <Button variant="ghost" size="sm" className="tech-gradient-accent tech-text group-hover:bg-transparent" asChild>
                     <Link
                       href="/tutorials/character-consistency"
                       title="Tutorial on mastering character consistency with Nano Banana AI"
                     >
-                      Character Consistency Mastery<ArrowRight className="h-4 w-4 ml-1" />
+                      Start Learning<ArrowRight className="h-4 w-4 ml-1" />
                     </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-lg transition-shadow">
-              <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-t-lg flex items-center justify-center">
+            <Card className="group tech-card hover:scale-105 transition-all duration-300">
+              <div className="aspect-video rounded-t-lg overflow-hidden relative">
                 <img
                   src="/Multi-Turn Editing.avif"
-                  alt=" Multi-Turn Editing Techniques"
-                  className="w-full h-full object-cover"
+                  alt="Multi-Turn Editing Techniques"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 tech-gradient-secondary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
               <CardHeader>
                 <div className="flex items-center gap-2 mb-2">
-                  <Badge>Advanced</Badge>
+                  <Badge className="tech-glow">Advanced</Badge>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Star className="h-4 w-4 fill-current text-yellow-500 mr-1" />
                     4.7
                   </div>
                 </div>
-                <CardTitle className="group-hover:text-primary transition-colors">
+                <CardTitle className="group-hover:text-primary transition-colors text-xl">
                   Multi-Turn Editing Techniques
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-base">
                   Advanced strategies for complex multi-step edits while preserving image quality and consistency.
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
-                  <span className="text-sm text-muted-foreground">35 min read</span>
-                  <Button variant="ghost" size="sm" asChild>
+                  <Badge variant="outline">35 min read</Badge>
+                  <Button variant="ghost" size="sm" className="tech-gradient-secondary tech-text group-hover:bg-transparent" asChild>
                     <Link
                       href="/tutorials/multi-turn-editing"
                       title="Advanced multi-turn editing techniques for Nano Banana AI"
                     >
-                      Multi-Turn Editing Techniques<ArrowRight className="h-4 w-4 ml-1" />
+                      Start Learning<ArrowRight className="h-4 w-4 ml-1" />
                     </Link>
                   </Button>
                 </div>
@@ -346,22 +402,23 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-primary text-primary-foreground">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 font-[family-name:var(--font-space-grotesk)]">
+      <section className="py-16 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 tech-gradient"></div>
+        <div className="container mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 font-[family-name:var(--font-space-grotesk)] text-white tech-neon">
             Ready to Master Nano Banana?
           </h2>
-          <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
             Join thousands of creators who are already using Nano Banana to transform their image editing workflow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8" asChild>
+            <Button size="lg" variant="secondary" className="text-lg px-8 glass tech-glow hover:scale-105 transition-transform" asChild>
               <Link href="/tutorials" title="Start learning Nano Banana AI image editing now">Start Learning Now</Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-8 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
+              className="text-lg px-8 border-white/20 text-white hover:bg-white/10 glass tech-glow hover:scale-105 transition-transform"
               asChild
             >
               <Link href="/tutorials" title="Browse all Nano Banana AI image editing tutorials">Browse All Tutorials</Link>

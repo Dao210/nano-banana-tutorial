@@ -9,7 +9,7 @@ export interface PromptData {
 }
 
 export const categories = [
-  { id: 'all', label: 'All', count: 25 },
+  { id: 'all', label: 'All', count: 36 },
   { id: 'creative', label: 'Creative', count: 7 },
   { id: 'design', label: 'Design', count: 6 },
   { id: 'ecommerce', label: 'E-commerce', count: 4 },
@@ -225,7 +225,87 @@ export const prompts: PromptData[] = [
     prompt: 'Using the nano-banana model, create a 1/7 scale commercialized figurine of the characters in the picture, in a realistic style, in a real environment. The figurine is placed on a computer desk.The figurine has a round transparent acrylic base, with no text on the base. The content on the computer screen is the Zbrush modeling process of this figurine. Next to the computer screen is a BANDAI-style toy packaging box printed with the originalUsing the nano-banana model, create a 1/7 scale commercialized figurine of the characters in the picture, in a realistic style, in a real environment. The figurine is placed on a computer desk.The figurine has a round transparent acrylic base, with no text on the base. The content on the computer screen is the Zbrush modeling process of this figurine. Next to the computer screen is a BANDAI-style toy packaging box printed with the original.',
     category: 'character',
     previewImage: '/prompt/3d girl.jpg',
+  },
+  {
+    id: '27',
+    title: 'Neon Rain Cyberpunk Vista',
+    description: 'Render a rain-soaked mega-city skyline filled with holograms and neon signage',
+    prompt: 'Create an ultra-detailed cyberpunk cityscape at midnight. Show elevated maglev trains, holographic billboards, and reflective puddles on the streets, all glowing in saturated magenta, cyan, and amber neon. Rain streaks should catch rim light while dense atmospheric fog adds depth between the skyscrapers. Compose the scene from a rooftop toward a bustling intersection using cinematic widescreen framing and volumetric lighting.',
+    category: 'creative',
+    previewImage: '/prompt/neon-rain-cyberpunk-vista.jpg',
+  },
+  {
+    id: '28',
+    title: 'Ghibli Forest Guardian',
+    description: 'Illustrate a whimsical forest spirit guiding children through a glowing woodland',
+    prompt: 'Illustrate a hand-painted scene inspired by Studio Ghibli. Depict a gentle forest spirit with soft fur and luminescent markings walking beside two curious children down a mossy path. Surround them with oversized ferns, floating fireflies, and dappled golden hour light filtering through cedar trees. Use pastel palettes, watercolor textures, and subtle film grain to evoke warmth and nostalgia.',
+    category: 'creative',
+    previewImage: '/prompt/ghibli-forest-guardian.jpg',
+  },
+  {
+    id: '29',
+    title: 'Orbital Habitat Concept',
+    description: 'Design a futuristic space station concourse with panoramic starlit views',
+    prompt: 'Design high-end concept art of a torus-shaped orbital habitat interior. Feature a wide concourse with transparent aluminum panels revealing Earth below, modular hydroponic gardens, and floating digital signage. Populate the scene with scientists in adaptive suits and autonomous drones. Use cool cyan and warm amber lighting accents, sharp reflections, and cinematic depth of field to emphasize scale.',
+    category: 'design',
+    previewImage: '/prompt/orbital-habitat-concept.jpg',
+  },
+  {
+    id: '30',
+    title: 'Pastel Watercolor Horizon',
+    description: 'Paint a tranquil sunrise over layered mountains with flowing watercolor strokes',
+    prompt: 'Generate a loose watercolor landscape of misty mountains at sunrise. Blend soft pastel washes of peach, lavender, and teal to depict receding peaks, with delicate wet-on-wet transitions. Add a reflective lake in the foreground catching the dawn glow and sparse pine silhouettes painted with dry-brush texture. Preserve paper grain, subtle bloom effects, and hand-drawn pencil outlines.',
+    category: 'creative',
+    previewImage: '/prompt/pastel-watercolor-horizon.jpg',
+  },
+  {
+    id: '31',
+    title: 'Noir Detective Alley',
+    description: 'Capture a film-noir detective portrait lit by a lone streetlamp in rainy alleyway',
+    prompt: 'Photograph a noir detective leaning against a brick wall in a rain-soaked alley circa 1948. Illuminate the scene with a single tungsten streetlamp creating dramatic chiaroscuro and long shadows. Add glistening cobblestones, swirling cigarette smoke, and blurred headlights in the distance. Render in high-contrast monochrome with cinematic grain, shallow depth of field, and subtle lens flare.',
+    category: 'photography',
+    previewImage: '/prompt/noir-detective-alley.jpg',
+  },
+  {
+    id: '32',
+    title: 'Dreamscape of Melting Skies',
+    description: 'Craft a surreal landscape with melting architecture and floating horizons inspired by Dalí',
+    prompt: 'Construct a surreal dreamscape inspired by Salvador Dalí. Show elongated shadows across a barren desert where marble buildings melt into cascading ribbons that dissolve into the sky. Include giant pocket watches draped over crystal obelisks, a calm reflective pool mirroring a fragmented moon, and distant figures with elongated limbs. Use hyperreal detail, luminous gradients, and impossible perspective shifts.',
+    category: 'creative',
+    previewImage: '/prompt/dreamscape-melting-skies.jpg',
+  },
+  {
+    id: '33',
+    title: 'Cinematic Portrait Spotlight',
+    description: 'Produce a dramatic character portrait with golden rim light and soft haze',
+    prompt: 'Capture a cinematic head-and-shoulders portrait of a heroine standing in a hazy warehouse. Employ golden rim lighting from behind, a cool teal key light from the front, and suspended dust particles caught in the beam. Render realistic skin texture, wet hair strands, and light flares from anamorphic lenses. Maintain shallow depth of field and color grading reminiscent of modern action films.',
+    category: 'photography',
+    previewImage: '/prompt/cinematic-portrait-spotlight.jpg',
+  },
+  {
+    id: '34',
+    title: 'Mecha Hangar Briefing',
+    description: 'Visualize towering mechs inside an industrial hangar surrounded by engineers',
+    prompt: 'Illustrate a colossal mech hangar during a pre-battle briefing. Show two 40-meter tall mechs illuminated by overhead gantry lights, surrounded by technicians, holographic tactical displays, and refueling drones. Integrate layered depth with atmospheric fog, reflective metal flooring, and sparks from welding teams. Aim for cinematic composition and high-detail hard-surface rendering.',
+    category: 'design',
+    previewImage: '/prompt/mecha-hangar-briefing.jpg',
+  },
+  {
+    id: '35',
+    title: 'Midnight Glass Tower Render',
+    description: 'Showcase a luxury waterfront skyscraper with reflective pools and dynamic lighting',
+    prompt: 'Create an architectural visualization of a glass-clad luxury tower at midnight beside a calm marina. Feature cascading terraces, illuminated infinity pools, and sculptural landscaping lit by programmable LEDs. Include long-exposure light trails from passing vehicles and subtle ripples reflecting the skyline. Emphasize photorealistic materials, global illumination, and cinematic contrast.',
+    category: 'design',
+    previewImage: '/prompt/midnight-glass-tower.jpg',
+  },
+  {
+    id: '36',
+    title: 'Tropical Product Splash',
+    description: 'Stage a premium beverage product shot with tropical fruits and dynamic water splash',
+    prompt: 'Photograph a premium beverage bottle mid-air with an energetic water splash and tropical fruits. Use high-speed flash to freeze motion, backlight the droplets for sparkle, and place sliced passion fruit, pineapple, and mint around the bottle. Set the scene against a turquoise gradient backdrop with condensation beads on glass, ensuring crisp highlights and commercial polish.',
+    category: 'ecommerce',
+    previewImage: '/prompt/tropical-product-splash.jpg',
   }
-  
+
 
 ];

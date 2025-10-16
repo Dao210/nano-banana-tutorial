@@ -1,21 +1,14 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden tech-grid py-16 md:py-24 flex items-center">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image 
-          src="/prompt/hero-brain.jpg" 
-          alt="AI brain visualization" 
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-20"
-        />
-        <div className="absolute inset-0 tech-gradient opacity-10"></div>
+    <section className="relative overflow-hidden tech-grid bg-slate-950 py-16 md:py-24 flex items-center">
+      {/* Layered procedural background */}
+      <div className="absolute inset-0 z-0 hero-background">
+        <div className="hero-orb hero-orb-primary" aria-hidden />
+        <div className="hero-orb hero-orb-secondary" aria-hidden />
+        <div className="hero-orb hero-orb-tertiary" aria-hidden />
       </div>
       
       <div className="container relative z-10 mx-auto max-w-6xl px-4">

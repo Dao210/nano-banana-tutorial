@@ -282,6 +282,57 @@
     background-size: 50px 50px;
   }
   
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(59, 130, 246, 0.2), transparent 45%),
+                radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.15), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(6, 182, 212, 0.15), transparent 55%);
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    overflow: hidden;
+  }
+  
+  .hero-orb {
+    position: absolute;
+    width: clamp(16rem, 30vw, 24rem);
+    height: clamp(16rem, 30vw, 24rem);
+    border-radius: 9999px;
+    filter: blur(40px);
+    opacity: 0.4;
+    animation: orbPulse 12s infinite ease-in-out;
+  }
+  
+  .hero-orb-primary {
+    background: radial-gradient(circle, rgba(59,130,246,0.7) 0%, rgba(59,130,246,0) 60%);
+    top: 15%;
+    left: 10%;
+  }
+  
+  .hero-orb-secondary {
+    background: radial-gradient(circle, rgba(139,92,246,0.65) 0%, rgba(139,92,246,0) 60%);
+    bottom: 10%;
+    right: 15%;
+    animation-delay: 4s;
+  }
+  
+  .hero-orb-tertiary {
+    background: radial-gradient(circle, rgba(6,182,212,0.6) 0%, rgba(6,182,212,0) 60%);
+    bottom: 5%;
+    left: 40%;
+    animation-delay: 8s;
+  }
+  
+  @keyframes orbPulse {
+    0%, 100% {
+      transform: scale(1) translate3d(0, 0, 0);
+      opacity: 0.35;
+    }
+    50% {
+      transform: scale(1.15) translate3d(0, -10px, 0);
+      opacity: 0.5;
+    }
+  }
+  
   /* 科技感霓虹效果 */
   .tech-neon {
     text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);

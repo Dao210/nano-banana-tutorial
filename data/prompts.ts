@@ -10,11 +10,11 @@ export interface PromptData {
 
 export const categories = [
   { id: 'all', label: 'All', count: 36 },
-  { id: 'creative', label: 'Creative', count: 7 },
-  { id: 'design', label: 'Design', count: 6 },
-  { id: 'ecommerce', label: 'E-commerce', count: 4 },
-  { id: 'photography', label: 'Photography', count: 4 },
-  { id: 'character', label: 'Character', count: 4 },
+  { id: 'creative', label: 'Creative', count: 11 },
+  { id: 'design', label: 'Design', count: 9 },
+  { id: 'ecommerce', label: 'E-commerce', count: 5 },
+  { id: 'photography', label: 'Photography', count: 6 },
+  { id: 'character', label: 'Character', count: 5 },
 ];
 
 export const prompts: PromptData[] = [

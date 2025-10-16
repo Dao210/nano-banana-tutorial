@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden tech-grid bg-slate-950 py-16 md:py-24 flex items-center">
+    <section className="relative overflow-hidden tech-grid bg-slate-950 py-20 flex items-center">
       {/* Layered procedural background */}
       <div className="absolute inset-0 z-0 hero-background">
         <div className="hero-orb hero-orb-primary" aria-hidden />

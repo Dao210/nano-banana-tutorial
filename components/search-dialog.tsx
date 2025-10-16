@@ -159,9 +159,9 @@ export function SearchDialog({ children }: SearchDialogProps) {
             ) : (
               <div className="text-center py-8">
                 <Search className="h-12 w-12 text-muted-foreground mx-auto mb-3" />
-                <p className="text-muted-foreground">No tutorials found for "{query}"</p>
+                <p className="text-muted-foreground">No tutorials found for &quot;{query}&quot;</p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Try searching for "getting started" or "character consistency"
+                  Try searching for &quot;getting started&quot; or &quot;character consistency&quot;
                 </p>
               </div>
             )}
@@ -174,7 +174,7 @@ export function SearchDialog({ children }: SearchDialogProps) {
                 onClick={() => setIsOpen(false)}
                 className="text-sm text-primary hover:underline"
               >
-                View all results for "{query}" →
+                View all results for &quot;{query}&quot; →
               </Link>
             </div>
           )}

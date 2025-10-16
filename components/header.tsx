@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Search, Sparkles } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { SearchDialog } from "./search-dialog"
 import { MobileNav } from "./mobile-nav"
 
@@ -61,7 +62,7 @@ function Header({ currentPath = "/" }: HeaderProps) {
         <div className="flex-shrink-0 flex items-center justify-center mx-4">
           <Link href="/" className="flex items-center space-x-2">
             <div className="h-8 w-8 flex items-center justify-center">
-              <img src="/favicon.ico" alt="Logo" className="h-8 w-8" />
+              <Image src="/favicon.ico" alt="Logo" width={32} height={32} className="h-8 w-8" />
             </div>
             <span className="font-bold text-xl text-primary font-[family-name:var(--font-space-grotesk)]">
               Nano Banana

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Menu, Home, BookOpen, Users, Info, Mail, Sparkles, Search } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { SearchDialog } from "./search-dialog"
 
 const navigationItems = [
@@ -31,7 +32,7 @@ export function MobileNav() {
         <SheetHeader>
           <SheetTitle className="flex items-center gap-2 text-left">
             <div className="h-8 w-8 flex items-center justify-center">
-              <img src="/favicon.ico" alt="Logo" className="h-8 w-8" />
+              <Image src="/favicon.ico" alt="Logo" width={32} height={32} className="h-8 w-8" />
             </div>
             <span className="font-bold text-xl text-primary font-[family-name:var(--font-space-grotesk)]">
               Nano Banana

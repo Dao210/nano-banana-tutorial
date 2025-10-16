@@ -76,7 +76,7 @@ export default function PrivacyPage() {
               <div className="text-center mb-16">
                 <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Our Privacy Commitment</h2>
                 <p className="text-lg text-slate-600 max-w-2xl mx-auto text-pretty">
-                  Simple, transparent, and absolute: We don't collect, store, or process any of your personal
+                  Simple, transparent, and absolute: We don&apos;t collect, store, or process any of your personal
                   information.
                 </p>
               </div>
@@ -102,7 +102,7 @@ export default function PrivacyPage() {
                     </div>
                     <h3 className="text-xl font-semibold text-slate-900 mb-4">Zero Tracking</h3>
                     <p className="text-slate-600 text-pretty">
-                      We don't use cookies, analytics, or any tracking mechanisms. Your browsing behavior remains
+                      We don&apos;t use cookies, analytics, or any tracking mechanisms. Your browsing behavior remains
                       completely private and anonymous.
                     </p>
                   </CardContent>
@@ -112,7 +112,7 @@ export default function PrivacyPage() {
               <Card className="border-0 shadow-lg bg-gradient-to-r from-slate-900 to-slate-800 text-white">
                 <CardContent className="p-12 text-center">
                   <Lock className="w-16 h-16 mx-auto mb-6 text-emerald-400" />
-                  <h3 className="text-2xl font-bold mb-4">What We DON'T Collect</h3>
+                  <h3 className="text-2xl font-bold mb-4">What We DON&apos;T Collect</h3>
                   <div className="grid md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto">
                     <ul className="space-y-3">
                       <li className="flex items-center gap-3">
@@ -179,7 +179,7 @@ export default function PrivacyPage() {
                   <h3 className="text-2xl font-semibold text-slate-900 mb-4">No Account System</h3>
                   <p className="text-slate-600 text-pretty leading-relaxed">
                     Unlike most websites, we deliberately chose not to implement user accounts, registration systems, or
-                    login functionality. This means you'll never be asked to provide your name, email address, phone
+                    login functionality. This means you&apos;ll never be asked to provide your name, email address, phone
                     number, or any other personal details. All content is freely accessible without barriers, ensuring
                     your complete anonymity while learning about AI technologies.
                   </p>
@@ -189,7 +189,7 @@ export default function PrivacyPage() {
                   <h3 className="text-2xl font-semibold text-slate-900 mb-4">Technical Implementation</h3>
                   <p className="text-slate-600 text-pretty leading-relaxed">
                     Our website is built as a static site with no server-side data processing or storage capabilities
-                    for personal information. We don't use Google Analytics, Facebook Pixel, or any third-party tracking
+                    for personal information. We don&apos;t use Google Analytics, Facebook Pixel, or any third-party tracking
                     services. The site functions entirely through client-side rendering, meaning your interactions
                     remain on your device and are never transmitted to our servers for analysis or storage.
                   </p>
@@ -198,17 +198,17 @@ export default function PrivacyPage() {
                 <div>
                   <h3 className="text-2xl font-semibold text-slate-900 mb-4">Third-Party Services</h3>
                   <p className="text-slate-600 text-pretty leading-relaxed">
-                    We don't integrate with any third-party services that could potentially collect your data. There are
+                    We don&apos;t integrate with any third-party services that could potentially collect your data. There are
                     no embedded social media widgets, advertising networks, or external analytics platforms. Any
                     external links in our content lead to other websites that have their own privacy policies, but we
-                    don't share any information with them about your visit to our site.
+                    don&apos;t share any information with them about your visit to our site.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-2xl font-semibold text-slate-900 mb-4">Data Security</h3>
                   <p className="text-slate-600 text-pretty leading-relaxed">
-                    Since we don't collect any data, there's no personal information to secure or potentially breach.
+                    Since we don&apos;t collect any data, there&apos;s no personal information to secure or potentially breach.
                     This approach provides the ultimate data security—complete absence of data collection. You can
                     browse our tutorials with confidence, knowing that your privacy is protected by design, not just by
                     policy.
@@ -229,7 +229,7 @@ export default function PrivacyPage() {
                   <p className="text-slate-600 text-pretty leading-relaxed">
                     If you have questions about this privacy policy or our practices, you can reach out through our
                     public channels. However, please note that we cannot respond to individual privacy requests since we
-                    don't maintain any personal data that could be accessed, modified, or deleted.
+                    don&apos;t maintain any personal data that could be accessed, modified, or deleted.
                   </p>
                 </div>
               </div>
@@ -244,7 +244,7 @@ export default function PrivacyPage() {
               <Globe className="w-16 h-16 mx-auto mb-6 text-emerald-200" />
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-balance">Privacy by Design, Not by Accident</h2>
               <p className="text-xl mb-8 text-emerald-100 max-w-2xl mx-auto text-pretty">
-                Our privacy-first approach isn't just a policy—it's built into the very foundation of our platform.
+                Our privacy-first approach isn&apos;t just a policy—it&apos;s built into the very foundation of our platform.
                 Enjoy learning about AI with complete peace of mind.
               </p>
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 px-6 py-3 rounded-full">

@@ -38,7 +38,7 @@ export default function CharacterConsistencyPage() {
       <SchemaOrg
         type="article"
         data={{
-          headline: "Character Consistency Mastery | Nano Banana AI Tutorial",
+          title: "Character Consistency Mastery | Nano Banana AI Tutorial",
           description:
             "Unlock professional character consistency in Nano Banana AI. Learn proven strategies to maintain reliable likeness across edits, boost your visual storytelling, and achieve brand-level results.",
           url: "https://nanobanana.fans/tutorials/character-consistency",

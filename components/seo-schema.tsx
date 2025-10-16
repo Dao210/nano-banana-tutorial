@@ -3,7 +3,8 @@ import Script from "next/script"
 interface SchemaOrgProps {
   type: "website" | "article" | "tutorial" | "searchResults" | "ContactPage"
   data: {
-    title: string
+    title?: string
+    headline?: string
     description: string
     url: string
     image?: string
@@ -29,6 +30,8 @@ interface SchemaOrgProps {
 }
 
 export function SchemaOrg({ type, data }: SchemaOrgProps) {
+  const schemaTitle = data.title ?? data.headline ?? "Nano Banana"
+
   const getSchema = () => {
     const baseSchema = {
       "@context": "https://schema.org",
@@ -42,7 +45,7 @@ export function SchemaOrg({ type, data }: SchemaOrgProps) {
               : type === "ContactPage"
                 ? "ContactPage"
                 : "SearchResultsPage",
-      name: data.title,
+      name: schemaTitle,
       description: data.description,
       url: data.url,
       image: data.image || "https://nanobanana.fans/og-image.jpg",
@@ -115,7 +118,7 @@ export function SchemaOrg({ type, data }: SchemaOrgProps) {
       return {
         ...baseSchema,
         "@type": "Article",
-        headline: data.title,
+        headline: data.headline ?? schemaTitle,
         datePublished: data.datePublished,
         dateModified: data.dateModified,
         author: {

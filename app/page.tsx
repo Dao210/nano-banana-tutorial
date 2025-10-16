@@ -80,7 +80,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto">
             <Badge className="mb-4 tech-glow tech-gradient-accent text-white border-0">
               <Sparkles className="mr-2 h-4 w-4" />
-              Google's Latest AI Innovation
+              Google&apos;s Latest AI Innovation
             </Badge>
             <h1 className="text-4xl md:text-7xl font-bold text-balance mb-6 font-[family-name:var(--font-space-grotesk)]">
               Master <span className="tech-text">Nano Banana</span> AI Image Editing

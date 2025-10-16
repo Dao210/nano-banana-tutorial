@@ -57,8 +57,8 @@ export default function TermsPage() {
               <section>
                 <h2 className="text-2xl font-semibold text-foreground mb-4">Welcome to Our Community</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Welcome to Nano Banana, your AI Agent Laboratory! We're dedicated to creating simple, beautiful, and
-                  accessible AI learning experiences. By using our platform, you're joining a community committed to
+                  Welcome to Nano Banana, your AI Agent Laboratory! We&apos;re dedicated to creating simple, beautiful, and
+                  accessible AI learning experiences. By using our platform, you&apos;re joining a community committed to
                   growing and progressing together in the exciting world of artificial intelligence.
                 </p>
               </section>

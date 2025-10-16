@@ -199,7 +199,7 @@ export default async function SearchPage({
               <Search className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
               <h2 className="text-2xl font-bold mb-2">No tutorials found</h2>
               <p className="text-muted-foreground mb-6">
-                We couldn't find any tutorials matching "{query}". Try adjusting your search terms.
+                We couldn&apos;t find any tutorials matching &quot;{query}&quot;. Try adjusting your search terms.
               </p>
               <div className="space-y-2">
                 <p className="text-sm text-muted-foreground">Popular searches:</p>

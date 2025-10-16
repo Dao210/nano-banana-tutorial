@@ -172,7 +172,9 @@ Continue your learning journey with our intermediate tutorials on character cons
   ],
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+
   // In a real app, you'd fetch the tutorial data based on the slug
   return {
     title: `${tutorialData.title} | Nano Banana Tutorials`,
@@ -187,6 +189,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       modifiedTime: tutorialData.updatedAt,
       authors: [tutorialData.author.name],
       tags: tutorialData.tags,
+      url: `https://nanobanana.fans/tutorials/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -196,7 +199,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function TutorialPage({ params }: { params: { slug: string } }) {
+export default async function TutorialPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+
   return (
     <div className="min-h-screen bg-background">
       <SchemaOrg
@@ -204,7 +209,7 @@ export default function TutorialPage({ params }: { params: { slug: string } }) {
         data={{
           title: tutorialData.title,
           description: tutorialData.description,
-          url: `https://nanobanana.fans/tutorials/${params.slug}`,
+          url: `https://nanobanana.fans/tutorials/${slug}`,
           image: "https://nanobanana.fans/og-image.jpg",
           datePublished: tutorialData.publishedAt,
           dateModified: tutorialData.updatedAt,
@@ -227,12 +232,12 @@ export default function TutorialPage({ params }: { params: { slug: string } }) {
         items={[
           { name: "Home", url: "https://nanobanana.fans" },
           { name: "Tutorials", url: "https://nanobanana.fans/tutorials" },
-          { name: tutorialData.title, url: `https://nanobanana.fans/tutorials/${params.slug}` },
+          { name: tutorialData.title, url: `https://nanobanana.fans/tutorials/${slug}` },
         ]}
       />
 
       {/* Header */}
-      <Header currentPath={`/tutorials/${params.slug}`} />
+      <Header currentPath={`/tutorials/${slug}`} />
 
       {/* Breadcrumb */}
       <div className="border-b bg-muted/30">

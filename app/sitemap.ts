@@ -104,9 +104,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const tutorialPages = []
   try {
     const tutorialsPath = path.join(process.cwd(), "app", "tutorials")
-    const tutorialFiles = await glob(`${tutorialsPath}/*/page.tsx`)
-    
-    for (const file of tutorialFiles) {
+    const tutorialFiles = glob(`${tutorialsPath}/*/page.tsx`)
+
+    for await (const file of tutorialFiles) {
       const relativePath = path.relative(tutorialsPath, file)
       const slug = path.dirname(relativePath)
       

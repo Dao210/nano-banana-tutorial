@@ -328,7 +328,8 @@ function generateTitle(keywords: string[], category: string): string {
     ],
   };
   
-  const templates = titleTemplates[category] || titleTemplates["基础操作"];
+  const templates =
+    titleTemplates[category as keyof typeof titleTemplates] ?? titleTemplates["基础操作"];
   const template = templates[Math.floor(Math.random() * templates.length)];
   const mainKeyword = keywords[0] || "Nano Banana";
   
@@ -336,7 +337,7 @@ function generateTitle(keywords: string[], category: string): string {
 }
 
 function generateDescription(keywords: string[], category: string): string {
-  const descriptions = {
+  const descriptions: Record<string, string> = {
     "人物处理": "掌握 Nano Banana 的人物一致性技术，学习如何在多个编辑中保持人物特征的完整性和一致性。",
     "产品摄影": "学习如何使用 Nano Banana 创建专业级产品摄影作品，提升电商和营销视觉效果。",
     "场景创建": "探索 Nano Banana 的场景创建能力，构建令人惊叹的视觉环境和背景。",
@@ -350,7 +351,7 @@ function generateDescription(keywords: string[], category: string): string {
 
 // 内容生成函数
 function generateIntroductionContent(keywords: string[], category: string): string {
-  const introductions = {
+  const introductions: Record<string, string> = {
     "人物处理": `Nano Banana 的人物一致性技术彻底改变了数字肖像编辑的游戏规则。通过先进的 AI 算法，它能够在多次编辑中完美保持人物的面部特征、表情和身份识别特征。这项技术不仅适用于专业摄影师，也为内容创作者、设计师和普通用户提供了前所未有的创作自由度。`,
     "产品摄影": `在电商竞争激烈的今天，产品摄影的质量直接影响销售转化率。Nano Banana 为产品摄影带来了革命性的变化，让你无需专业设备和摄影棚就能创建出媲美专业工作室的效果。从背景替换到光线调整，从色彩校正到细节增强，每个环节都能实现精确控制。`,
     "场景创建": `场景创建是视觉叙事的核心元素。Nano Banana 的场景生成能力让你能够将普通的图像转换为完整的视觉世界。无论是梦幻的奇幻场景、逼真的自然环境，还是未来的科幻世界，都能通过简单的文字描述实现。这项技术为电影制作人、游戏设计师和创意工作者提供了强大的工具。`,
@@ -375,7 +376,7 @@ function generateSteps(keywords: string[], category: string): string[] {
     "输出导出：保存和分享你的作品",
   ];
   
-  const categorySpecificSteps = {
+  const categorySpecificSteps: Record<string, string[]> = {
     "人物处理": [
       "人物分析：识别面部特征和关键点",
       "一致性设置：配置人物保持参数",
@@ -461,7 +462,7 @@ function generateConclusionContent(keywords: string[], category: string): string
 
 // 其他辅助函数
 function selectAuthor(category: string): ArticleConfig["author"] {
-  const authors = {
+  const authors: Record<string, ArticleConfig["author"]> = {
     "人物处理": {
       name: "Dr. Emily Rodriguez",
       bio: "AI Research Specialist & Google Developer Expert",
@@ -497,7 +498,7 @@ function selectAuthor(category: string): ArticleConfig["author"] {
 }
 
 function getSectionIcon(sectionType: string, category: string): string {
-  const iconMap = {
+  const iconMap: Record<string, string> = {
     introduction: "Sparkles",
     guide: "Target",
     examples: "ImageIcon",
@@ -510,7 +511,7 @@ function getSectionIcon(sectionType: string, category: string): string {
 }
 
 function getGradientColor(sectionType: string): string {
-  const gradientMap = {
+  const gradientMap: Record<string, string> = {
     introduction: "from-cyan-50 to-blue-50",
     guide: "from-amber-50 to-orange-50",
     examples: "from-blue-50 to-cyan-50",
@@ -523,7 +524,7 @@ function getGradientColor(sectionType: string): string {
 }
 
 function getCategoryBadge(category: string): string {
-  const badges = {
+  const badges: Record<string, string> = {
     "人物处理": "人物处理教程",
     "产品摄影": "摄影实战",
     "场景创建": "创意场景",
@@ -536,7 +537,7 @@ function getCategoryBadge(category: string): string {
 }
 
 function getCategoryIcon(category: string): string {
-  const icons = {
+  const icons: Record<string, string> = {
     "人物处理": "Users",
     "产品摄影": "Camera",
     "场景创建": "Film",
@@ -548,9 +549,9 @@ function getCategoryIcon(category: string): string {
   return icons[category] || "Sparkles";
 }
 
-function generateKeywords(keywords: string[], category: string): string {
+function generateKeywords(keywords: string[], category: string): string[] {
   const baseKeywords = ["Nano Banana", "AI image editing", "Google Gemini"];
-  const categoryKeywords = {
+  const categoryKeywords: Record<string, string[]> = {
     "人物处理": ["character consistency", "portrait editing", "face preservation"],
     "产品摄影": ["product photography", "ecommerce", "commercial imaging"],
     "场景创建": ["scene creation", "background generation", "environment design"],
@@ -558,13 +559,14 @@ function generateKeywords(keywords: string[], category: string): string {
     "基础操作": ["beginner guide", "tutorial", "getting started"],
     "创意应用": ["creative design", "artistic editing", "style transfer"],
   };
-  
-  return [...baseKeywords, ...keywords, ...(categoryKeywords[category] || [])].join(", ");
+
+  const combined = [...baseKeywords, ...keywords, ...(categoryKeywords[category] || [])];
+  return Array.from(new Set(combined.map((item) => item.trim()).filter(Boolean))).slice(0, 12);
 }
 
 function generateTags(keywords: string[], category: string): string[] {
   const baseTags = ["Nano Banana", "AI Image Editing"];
-  const categoryTags = {
+  const categoryTags: Record<string, string[]> = {
     "人物处理": ["Character", "Consistency", "Portrait"],
     "产品摄影": ["Product", "Photography", "E-commerce"],
     "场景创建": ["Scene", "Background", "Creative"],
@@ -576,14 +578,14 @@ function generateTags(keywords: string[], category: string): string[] {
   return [...baseTags, ...keywords, ...(categoryTags[category] || [])].slice(0, 8);
 }
 
-function estimateReadTime(category: string, difficulty: string): string {
-  const baseTime = {
+function estimateReadTime(category: string, difficulty: "beginner" | "intermediate" | "advanced"): string {
+  const baseTime: Record<"beginner" | "intermediate" | "advanced", number> = {
     beginner: 10,
     intermediate: 15,
     advanced: 25,
   };
-  
-  const categoryMultiplier = {
+
+  const categoryMultiplier: Record<string, number> = {
     "技术开发": 1.5,
     "场景创建": 1.2,
     "人物处理": 1.1,
@@ -599,14 +601,14 @@ function estimateReadTime(category: string, difficulty: string): string {
   return `${minutes} min`;
 }
 
-function generateViews(category: string, difficulty: string): string {
-  const baseViews = {
+function generateViews(category: string, difficulty: "beginner" | "intermediate" | "advanced"): string {
+  const baseViews: Record<"beginner" | "intermediate" | "advanced", string> = {
     beginner: "15.2k",
     intermediate: "8.5k",
     advanced: "4.1k",
   };
-  
-  const categoryPopularity = {
+
+  const categoryPopularity: Record<string, number> = {
     "基础操作": 1.5,
     "人物处理": 1.3,
     "产品摄影": 1.2,
@@ -629,7 +631,13 @@ function generateRelatedTutorials(category: string): Array<{
   readTime: string;
   rating: number;
 }> {
-  const relatedMap = {
+  const relatedMap: Record<string, Array<{
+    id: string
+    title: string
+    category: string
+    readTime: string
+    rating: number
+  }>> = {
     "人物处理": [
       {
         id: "character-consistency",
@@ -676,7 +684,7 @@ function generateRelatedTutorials(category: string): Array<{
 }
 
 function generateIntroductionTitle(keywords: string[], category: string): string {
-  const titles = {
+  const titles: Record<string, string> = {
     "人物处理": "人物一致性技术详解",
     "产品摄影": "专业产品摄影基础",
     "场景创建": "场景创建的艺术",
@@ -689,7 +697,7 @@ function generateIntroductionTitle(keywords: string[], category: string): string
 }
 
 function generateGuideTitle(keywords: string[], category: string): string {
-  const titles = {
+  const titles: Record<string, string> = {
     "人物处理": "分步操作指南",
     "产品摄影": "完整工作流程",
     "场景创建": "创建步骤详解",

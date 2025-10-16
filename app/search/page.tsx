@@ -57,14 +57,19 @@ const searchResults = [
   },
 ]
 
-export default function SearchPage({
+export default async function SearchPage({
   searchParams,
 }: {
-  searchParams: { search?: string; category?: string; difficulty?: string }
+  searchParams: Promise<{
+    search?: string;
+    category?: string;
+    difficulty?: string;
+  }>;
 }) {
-  const query = searchParams.search || ""
-  const category = searchParams.category || "all"
-  const difficulty = searchParams.difficulty || "all"
+  const resolvedSearchParams = await searchParams;
+  const query = resolvedSearchParams.search || ""
+  const category = resolvedSearchParams.category || "all"
+  const difficulty = resolvedSearchParams.difficulty || "all"
 
   return (
     <div className="min-h-screen bg-background">

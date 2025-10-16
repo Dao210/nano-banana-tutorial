@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sparkles, Github, Twitter, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function Footer() {
@@ -13,7 +14,7 @@ function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <div className="h-8 w-8 flex items-center justify-center">
-                <img src="/favicon.ico" alt="Logo" className="h-8 w-8 text-white" />
+                <Image src="/favicon.ico" alt="Logo" width={32} height={32} className="h-8 w-8 text-white" />
               </div>
               <span className="font-bold text-xl text-white font-[family-name:var(--font-space-grotesk)]">
                 Nano Banana

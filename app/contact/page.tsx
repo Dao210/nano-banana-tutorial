@@ -35,7 +35,7 @@ export default function ContactPage() {
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8">
-            Have questions about Nano Banana? Want to suggest a tutorial topic? Or found an issue that needs fixing? We'd love to hear from you!
+            Have questions about Nano Banana? Want to suggest a tutorial topic? Or found an issue that needs fixing? We&apos;d love to hear from you!
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">

@@ -222,8 +222,8 @@ export default function AboutPage() {
                 <div className="text-left p-6 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100">
                   <h3 className="text-xl font-semibold text-slate-900 mb-3">Innovation with Purpose</h3>
                   <p className="text-slate-600 text-pretty">
-                    We don't innovate for the sake of innovation. Every AI agent we create solves real problems and adds
-                    genuine value to users' lives.
+                    We don&apos;t innovate for the sake of innovation. Every AI agent we create solves real problems and adds
+                    genuine value to users&apos; lives.
                   </p>
                 </div>
 

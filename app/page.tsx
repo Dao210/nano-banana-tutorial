@@ -86,7 +86,7 @@ export default function HomePage() {
               Master <span className="tech-text">Nano Banana</span> AI Image Editing
             </h1>
             <p className="text-xl text-muted-foreground text-pretty mb-8 leading-relaxed max-w-3xl mx-auto">
-              Learn Google's revolutionary Nano Banana AI with comprehensive tutorials, step-by-step guides, and expert
+              Learn Google&apos;s revolutionary Nano Banana AI with comprehensive tutorials, step-by-step guides, and expert
               techniques. From character consistency to advanced multi-turn editing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -127,7 +127,7 @@ export default function HomePage() {
               Why Choose Our Platform?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              The most comprehensive resource for mastering Google's Nano Banana AI image editing technology.
+              The most comprehensive resource for mastering Google&apos;s Nano Banana AI image editing technology.
             </p>
           </div>
 
@@ -169,7 +169,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Stay current with the latest Nano Banana features, updates, and best practices as they're released.
+                  Stay current with the latest Nano Banana features, updates, and best practices as they&apos;re released.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -303,7 +303,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Learn the basics of Google's Nano Banana AI, from setup to your first image edit. Perfect for complete
+                  Learn the basics of Google&apos;s Nano Banana AI, from setup to your first image edit. Perfect for complete
                   beginners.
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
@@ -441,7 +441,7 @@ export default function HomePage() {
                 </span>
               </div>
               <p className="text-muted-foreground mb-4">
-                The ultimate resource for mastering Google's Nano Banana AI image editing technology.
+                The ultimate resource for mastering Google&apos;s Nano Banana AI image editing technology.
               </p>
               <div className="flex space-x-4">
                 <Link href="https://twitter.com/Joe84742708" target="_blank" rel="noopener noreferrer">

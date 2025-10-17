@@ -195,18 +195,26 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="group tech-card hover:scale-105 transition-all duration-300">
+              <div className="aspect-video rounded-t-lg overflow-hidden relative">
+                <img
+                  src="/prompt/portrait-enhanced.jpg"
+                  alt="AI Portrait Enhancer"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 tech-gradient opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
               <CardHeader>
                 <div className="mx-auto w-16 h-16 tech-gradient rounded-full flex items-center justify-center mb-4 tech-glow tech-pulse">
-                  <Sparkles className="h-8 w-8 text-white" />
+                  <ImageIcon className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">Clean White Packshot</CardTitle>
+                <CardTitle className="text-xl">AI Portrait Enhancer</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Studio-style product shot on pure white with soft ground shadow and crisp edges.
+                  Transform ordinary portraits into professional headshots with enhanced lighting and composition.
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
-                  <Badge className="tech-glow">E‑commerce</Badge>
+                  <Badge className="tech-glow">Photography</Badge>
                   <Button variant="ghost" size="sm" className="tech-gradient tech-text group-hover:bg-transparent" asChild>
                     <Link href="/prompts" title="Open Prompt Library">
                       Explore<ArrowRight className="h-4 w-4 ml-1" />
@@ -217,18 +225,26 @@ export default function HomePage() {
             </Card>
 
             <Card className="group tech-card hover:scale-105 transition-all duration-300">
+              <div className="aspect-video rounded-t-lg overflow-hidden relative">
+                <img
+                  src="/prompt/product-minimal.jpg"
+                  alt="Minimalist Product Showcase"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 tech-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
               <CardHeader>
                 <div className="mx-auto w-16 h-16 tech-gradient-accent rounded-full flex items-center justify-center mb-4 tech-glow tech-pulse">
-                  <ImageIcon className="h-8 w-8 text-white" />
+                  <Palette className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">Lifestyle Kitchen Scene</CardTitle>
+                <CardTitle className="text-xl">Minimalist Product Showcase</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Warm daylight from right, shallow depth, subtle tabletop reflection for realism.
+                  Create clean, minimalist product photography with professional studio lighting.
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
-                  <Badge className="tech-glow">Lifestyle</Badge>
+                  <Badge className="tech-glow">E-commerce</Badge>
                   <Button variant="ghost" size="sm" className="tech-gradient-accent tech-text group-hover:bg-transparent" asChild>
                     <Link href="/prompts" title="Open Prompt Library">
                       Explore<ArrowRight className="h-4 w-4 ml-1" />
@@ -239,18 +255,26 @@ export default function HomePage() {
             </Card>
 
             <Card className="group tech-card hover:scale-105 transition-all duration-300">
+              <div className="aspect-video rounded-t-lg overflow-hidden relative">
+                <img
+                  src="/prompt/fantasy-character.jpg"
+                  alt="Fantasy Character Generator"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 tech-gradient-secondary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
               <CardHeader>
                 <div className="mx-auto w-16 h-16 tech-gradient-secondary rounded-full flex items-center justify-center mb-4 tech-glow tech-pulse">
                   <Sparkles className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">Shadow‑Rich Editorial</CardTitle>
+                <CardTitle className="text-xl">Fantasy Character Generator</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Dramatic, directional shadows with gradient charcoal background and texture emphasis.
+                  Transform portraits into fantasy characters with magical elements and costume design.
                 </CardDescription>
                 <div className="flex items-center justify-between mt-4">
-                  <Badge className="tech-glow">Editorial</Badge>
+                  <Badge className="tech-glow">Character</Badge>
                   <Button variant="ghost" size="sm" className="tech-gradient-secondary tech-text group-hover:bg-transparent" asChild>
                     <Link href="/prompts" title="Open Prompt Library">
                       Explore<ArrowRight className="h-4 w-4 ml-1" />

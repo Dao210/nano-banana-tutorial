@@ -533,11 +533,13 @@ export default function HomePage() {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <Link
-                    href="/docs"
+                    href="https://pinkpfp.com"
+                    rel='dofollow'
+                    target='_blank'
                     className="hover:text-foreground transition-colors"
-                    title="Nano Banana AI documentation"
+                    title="pink pfp generator with Nano Banana AI"
                   >
-                    Documentation
+                    Pink pfp
                   </Link>
                 </li>
                 <li>

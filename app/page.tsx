@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -6,8 +8,12 @@ import { Star, Users, BookOpen, Zap, ImageIcon, Palette, Sparkles, ArrowRight, T
 import Link from "next/link"
 import { Header } from "@/components/header"
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
+import { getImageBlurData } from '@/lib/image-blur'
+import { performanceMonitor } from '@/lib/performance-monitor'
+import { useEffect } from 'react'
 
-// 动态导入SEO组件以避免ChunkLoadError
+// 动态导入SEO组件以避免ChunkLoadError - 保持SSR以确保SEO
 const SchemaOrg = dynamic(() => import("@/components/seo-schema").then(mod => ({ default: mod.SchemaOrg })), {
   ssr: true,
   loading: () => null
@@ -24,6 +30,11 @@ const CourseSchema = dynamic(() => import("@/components/seo-schema").then(mod =>
 })
 
 export default function HomePage() {
+  // Initialize performance monitoring on client side
+  useEffect(() => {
+    performanceMonitor.getMetrics()
+  }, [])
+
   return (
     <div className="min-h-screen bg-background tech-grid">
       {/* SEO Schema Components */}
@@ -38,13 +49,13 @@ export default function HomePage() {
           keywords: ["Nano Banana", "Google AI", "image editing", "AI tutorials", "character consistency", "AI prompts", "digital art", "photo editing"],
         }}
       />
-      
+
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "https://nanobanana.fans/" }
         ]}
       />
-      
+
       <CourseSchema
         data={{
           name: "Nano Banana AI Image Editing Mastery",
@@ -196,10 +207,14 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="group tech-card hover:scale-105 transition-all duration-300">
               <div className="aspect-video rounded-t-lg overflow-hidden relative">
-                <img
+                <Image
                   src="/prompt/portrait-enhanced.jpg"
                   alt="AI Portrait Enhancer"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={getImageBlurData('portrait-enhanced')}
                 />
                 <div className="absolute inset-0 tech-gradient opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
@@ -226,10 +241,14 @@ export default function HomePage() {
 
             <Card className="group tech-card hover:scale-105 transition-all duration-300">
               <div className="aspect-video rounded-t-lg overflow-hidden relative">
-                <img
+                <Image
                   src="/prompt/product-minimal.jpg"
                   alt="Minimalist Product Showcase"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={getImageBlurData('product-minimal')}
                 />
                 <div className="absolute inset-0 tech-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
@@ -256,10 +275,14 @@ export default function HomePage() {
 
             <Card className="group tech-card hover:scale-105 transition-all duration-300">
               <div className="aspect-video rounded-t-lg overflow-hidden relative">
-                <img
+                <Image
                   src="/prompt/fantasy-character.jpg"
                   alt="Fantasy Character Generator"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={getImageBlurData('fantasy-character')}
                 />
                 <div className="absolute inset-0 tech-gradient-secondary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
@@ -306,10 +329,14 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="group tech-card hover:scale-105 transition-all duration-300">
               <div className="aspect-video rounded-t-lg overflow-hidden relative">
-                <img
+                <Image
                   src="/Google-Nano-Banana-AI-Image-Generator-All-You-Need-To-Know.jpg"
                   alt="Getting Started with Nano Banana"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={getImageBlurData('getting-started')}
                 />
                 <div className="absolute inset-0 tech-gradient opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
@@ -346,10 +373,14 @@ export default function HomePage() {
 
             <Card className="group tech-card hover:scale-105 transition-all duration-300">
               <div className="aspect-video rounded-t-lg overflow-hidden relative">
-                <img
+                <Image
                   src="/new-tutorial-master-consistent-character-faces-with-nanobanana.webp"
                   alt="Character Consistency with Nano Banana"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={getImageBlurData('character-consistency')}
                 />
                 <div className="absolute inset-0 tech-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
@@ -385,10 +416,14 @@ export default function HomePage() {
 
             <Card className="group tech-card hover:scale-105 transition-all duration-300">
               <div className="aspect-video rounded-t-lg overflow-hidden relative">
-                <img
+                <Image
                   src="/Multi-Turn Editing.avif"
                   alt="Multi-Turn Editing Techniques"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={getImageBlurData('multi-turn-editing')}
                 />
                 <div className="absolute inset-0 tech-gradient-secondary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>

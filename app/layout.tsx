@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Space_Grotesk, DM_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import Script from "next/script"
 import "./globals.css"
 
 const spaceGrotesk = Space_Grotesk({
@@ -129,23 +130,44 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        {/* ...existing meta/link... */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EB226TXP1L"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-EB226TXP1L');
-      `,
-          }}
-        />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8886185433147735"
+
+        {/* Font preloading for performance */}
+        <link
+          rel="preload"
+          href="/_next/static/media/space-grotesk-latin.woff2"
+          as="font"
+          type="font/woff2"
           crossOrigin="anonymous"
-        ></script>
+        />
+        <link
+          rel="preload"
+          href="/_next/static/media/dm-sans-latin.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        {/* ...existing meta/link... */}
+        {/* Google Tag Manager - Optimized loading */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EB226TXP1L"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EB226TXP1L');
+          `}
+        </Script>
+
+        {/* Google AdSense - Lazy loading */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8886185433147735"
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`font-sans ${spaceGrotesk.variable} ${dmSans.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>

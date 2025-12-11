@@ -1,21 +1,71 @@
 {
-  "name": "Nano Banana Tutorial Platform",
+  "name": "Nano Banana - AI Image Editing Tutorials",
   "short_name": "Nano Banana",
-  "description": "Master Google's Nano Banana AI image editing with comprehensive tutorials and guides",
+  "description": "Master Google's Nano Banana AI image editing with comprehensive tutorials, prompts, and guides.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#164e63",
   "theme_color": "#164e63",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/icon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity", "photo_video"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Prompts",
+      "short_name": "Prompts",
+      "description": "Browse AI image editing prompts",
+      "url": "/prompts",
+      "icons": [{ "src": "/prompts-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "View Tutorials",
+      "short_name": "Tutorials",
+      "description": "View AI image editing tutorials",
+      "url": "/tutorials",
+      "icons": [{ "src": "/tutorials-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Join Community",
+      "short_name": "Community",
+      "description": "Join the Nano Banana community",
+      "url": "/community",
+      "icons": [{ "src": "/community-icon.png", "sizes": "96x96" }]
     }
   ]
 }

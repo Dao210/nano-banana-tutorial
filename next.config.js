@@ -64,7 +64,11 @@ const nextConfig = {
 
     return config;
   },
-  headers: async () => {
+  // Performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  // Security and cache headers
+  async headers() {
     return [
       {
         source: '/:all*(svg|jpg|jpeg|gif|png|webp|avif|ico)',
@@ -84,14 +88,6 @@ const nextConfig = {
           },
         ],
       },
-    ];
-  },
-  // Performance optimizations
-  poweredByHeader: false,
-  compress: true,
-  // Security headers
-  async headers() {
-    return [
       {
         source: '/:path*',
         headers: [

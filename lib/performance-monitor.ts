@@ -51,7 +51,8 @@ class PerformanceMonitor {
     this.observers.fid = new PerformanceObserver((entryList) => {
       const entries = entryList.getEntries()
       entries.forEach((entry) => {
-        this.metrics.fid = entry.processingStart - entry.startTime
+        const timingEntry = entry as PerformanceEventTiming
+        this.metrics.fid = timingEntry.processingStart - timingEntry.startTime
         this.reportMetric('FID', this.metrics.fid)
       })
     })

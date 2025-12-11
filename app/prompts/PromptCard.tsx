@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Copy, Check, Eye } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import Image from 'next/image';
 
 interface PromptCardProps {
   id: string;
@@ -43,9 +44,11 @@ const PromptCard = ({ title, description, prompt, category, previewImage, origin
   return (
     <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 tech-card hover:scale-105">
       <div className="relative overflow-hidden">
-        <img 
-          src={previewImage} 
+        <Image
+          src={previewImage}
           alt={title}
+          width={400}
+          height={192}
           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
         />
         <div className="absolute inset-0 tech-gradient opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
@@ -69,10 +72,12 @@ const PromptCard = ({ title, description, prompt, category, previewImage, origin
             <h4 className="text-sm font-medium text-foreground mb-2">Original Images</h4>
             <div className="flex gap-2">
               {originalImages.map((image, index) => (
-                <img 
+                <Image
                   key={index}
-                  src={image} 
+                  src={image}
                   alt={`Original ${index + 1}`}
+                  width={64}
+                  height={64}
                   className="w-16 h-16 object-cover rounded border border-border hover:scale-110 transition-transform"
                 />
               ))}

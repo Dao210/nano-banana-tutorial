@@ -3,12 +3,12 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 import { Input } from "@/components/ui/input"
 import { Star, Users, BookOpen, Zap, ImageIcon, Palette, Sparkles, ArrowRight, Twitter } from "lucide-react"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import dynamic from 'next/dynamic'
-import Image from 'next/image'
 import { getImageBlurData } from '@/lib/image-blur'
 import { performanceMonitor } from '@/lib/performance-monitor'
 import { useEffect } from 'react'
@@ -493,7 +493,7 @@ export default function HomePage() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="h-8 w-8 flex items-center justify-center">
-                  <img src="/favicon.ico" alt="Logo" className="h-8 w-8" />
+                  <Image src="/favicon.ico" alt="Logo" width={32} height={32} className="h-8 w-8" />
                 </div>
                 <span className="font-bold text-xl text-primary font-[family-name:var(--font-space-grotesk)]">
                   Nano Banana

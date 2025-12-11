@@ -16,12 +16,15 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+
 # env files
 .env*
 
 # plan and tasks
 IFLOW.md
-requirements and tasks
+agents.md
+/requirements and tasks
+/.claude
 
 # vercel
 .vercel
@@ -30,12 +33,5 @@ requirements and tasks
 *.tsbuildinfo
 next-env.d.ts
 public/.DS_Store
-.DS_Store
-.DS_Store
-public/.DS_Store
-public/.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
 .DS_Store
 compile.md
